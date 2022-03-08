@@ -8,7 +8,8 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\QuoteController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'root', '_controller' => 'App\\Controller\\QuoteController::index'], null, null, null, false, false, null]],
+        '/siema' => [[['_route' => 'cokolwiek', '_controller' => 'App\\Controller\\QuoteController::costam'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

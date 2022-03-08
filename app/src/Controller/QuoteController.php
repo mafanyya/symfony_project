@@ -2,20 +2,35 @@
 
 namespace App\Controller;
 
-use App\Repository\QuoteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class QuoteController extends AbstractController {
-  #[Route('/', name: 'index')]
-  public function index(QuoteRepository $quoteRepository): Response {
+class QuoteController extends AbstractController
+{
 
-    return $this->render(
-      'quote/index.html.twig',
-      [
-        'quotes' => $quoteRepository->findAll(),
-      ]
-    );
+  /**
+   * @Route ("/", name="root")
+   * @return Response
+   */
+  public function index(): Response
+  {
+    return $this->render('base.html.twig', [
+      'costam' => 'raz dwa trzy'
+    ]);
   }
+
+  /**
+   * @Route("/siema", name="cokolwiek")
+   * @return Response
+   */
+  public function costam(): Response
+  {
+    $costam = "siema";
+    return $this->render('base.html.twig',[
+      'costam' => $costam
+    ]);
+  }
+
+
 }
