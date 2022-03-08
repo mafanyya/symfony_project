@@ -53,6 +53,7 @@ class ComposerStaticInit8ba8fb810f4c01daf51d22a55eb56b0d
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Component\\Asset\\' => 24,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
@@ -225,6 +226,10 @@ class ComposerStaticInit8ba8fb810f4c01daf51d22a55eb56b0d
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
         ),
+        'Symfony\\Component\\Asset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/asset',
+        ),
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bundle',
@@ -362,7 +367,10 @@ class ComposerStaticInit8ba8fb810f4c01daf51d22a55eb56b0d
     );
 
     public static $classMap = array (
+        'App\\Controller\\LuckyController' => __DIR__ . '/../..' . '/src/Controller/LuckyController.php',
+        'App\\Controller\\QuoteController' => __DIR__ . '/../..' . '/src/Controller/QuoteController.php',
         'App\\DataFixtures\\AppFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AppFixtures.php',
+        'App\\DataFixtures\\QuoteFixture' => __DIR__ . '/../..' . '/src/DataFixtures/QuoteFixture.php',
         'App\\Entity\\Quote' => __DIR__ . '/../..' . '/src/Entity/Quote.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\QuoteRepository' => __DIR__ . '/../..' . '/src/Repository/QuoteRepository.php',
@@ -2765,6 +2773,23 @@ class ComposerStaticInit8ba8fb810f4c01daf51d22a55eb56b0d
         'Symfony\\Bundle\\TwigBundle\\DependencyInjection\\TwigExtension' => __DIR__ . '/..' . '/symfony/twig-bundle/DependencyInjection/TwigExtension.php',
         'Symfony\\Bundle\\TwigBundle\\TemplateIterator' => __DIR__ . '/..' . '/symfony/twig-bundle/TemplateIterator.php',
         'Symfony\\Bundle\\TwigBundle\\TwigBundle' => __DIR__ . '/..' . '/symfony/twig-bundle/TwigBundle.php',
+        'Symfony\\Component\\Asset\\Context\\ContextInterface' => __DIR__ . '/..' . '/symfony/asset/Context/ContextInterface.php',
+        'Symfony\\Component\\Asset\\Context\\NullContext' => __DIR__ . '/..' . '/symfony/asset/Context/NullContext.php',
+        'Symfony\\Component\\Asset\\Context\\RequestStackContext' => __DIR__ . '/..' . '/symfony/asset/Context/RequestStackContext.php',
+        'Symfony\\Component\\Asset\\Exception\\AssetNotFoundException' => __DIR__ . '/..' . '/symfony/asset/Exception/AssetNotFoundException.php',
+        'Symfony\\Component\\Asset\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/asset/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Asset\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/asset/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\Asset\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/asset/Exception/LogicException.php',
+        'Symfony\\Component\\Asset\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/asset/Exception/RuntimeException.php',
+        'Symfony\\Component\\Asset\\Package' => __DIR__ . '/..' . '/symfony/asset/Package.php',
+        'Symfony\\Component\\Asset\\PackageInterface' => __DIR__ . '/..' . '/symfony/asset/PackageInterface.php',
+        'Symfony\\Component\\Asset\\Packages' => __DIR__ . '/..' . '/symfony/asset/Packages.php',
+        'Symfony\\Component\\Asset\\PathPackage' => __DIR__ . '/..' . '/symfony/asset/PathPackage.php',
+        'Symfony\\Component\\Asset\\UrlPackage' => __DIR__ . '/..' . '/symfony/asset/UrlPackage.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\EmptyVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/EmptyVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\JsonManifestVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/JsonManifestVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\StaticVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/StaticVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\VersionStrategyInterface' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/VersionStrategyInterface.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractTagAwareAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractTagAwareAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/symfony/cache/Adapter/AdapterInterface.php',

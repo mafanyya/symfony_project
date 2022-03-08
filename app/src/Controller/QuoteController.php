@@ -15,9 +15,7 @@ class QuoteController extends AbstractController
    */
   public function index(): Response
   {
-    return $this->render('base.html.twig', [
-      'costam' => 'raz dwa trzy'
-    ]);
+    return $this->render('base.html.twig');
   }
 
   /**
@@ -31,6 +29,5 @@ class QuoteController extends AbstractController
       'costam' => $costam
     ]);
   }
-
 
 }

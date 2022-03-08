@@ -4,4 +4,10 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'shop_by_age' => [[], ['_controller' => 'App\\Controller\\LuckyController::shop_by_age'], [], [['text', '/shop_by_age']], [], [], []],
+    'shop_by_category' => [[], ['_controller' => 'App\\Controller\\LuckyController::shop_by_category'], [], [['text', '/shop_by_category']], [], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\LuckyController::contact'], [], [['text', '/contact']], [], [], []],
+    'registration' => [[], ['_controller' => 'App\\Controller\\LuckyController::registration'], [], [['text', '/registration']], [], [], []],
+    'root' => [[], ['_controller' => 'App\\Controller\\QuoteController::index'], [], [['text', '/']], [], [], []],
+    'cokolwiek' => [[], ['_controller' => 'App\\Controller\\QuoteController::costam'], [], [['text', '/siema']], [], [], []],
 ];

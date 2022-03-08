@@ -103,11 +103,11 @@ class __TwigTemplate_2b66cc7fafb8806d95be777bfe55e474684afb4a0f41f812f1774777b27
         </div>
 
         <nav class = \"nav\">
-          <a class = \"nav_link\" href=\"#\">Home</a>
-          <a class = \"nav_link\" href=\"#\">Shop by age</a>
-          <a class = \"nav_link\" href=\"#\">Shop by category</a>
-          <a class = \"nav_link\" href=\"#\">Contact</a>
-          <a class = \"nav_link\" href=\"#\">Registration</a>
+          <a class = \"nav_link\" href=\"/\">Home</a>
+          <a class = \"nav_link\" href=\"/shop_by_age\">Shop by age</a>
+          <a class = \"nav_link\" href=\"/shop_by_category\">Shop by category</a>
+          <a class = \"nav_link\" href=\"/contact\">Contact</a>
+          <a class = \"nav_link\" href=\"/registration\">Registration</a>
 
 
         </nav>
@@ -302,11 +302,11 @@ class __TwigTemplate_2b66cc7fafb8806d95be777bfe55e474684afb4a0f41f812f1774777b27
         </div>
 
         <nav class = \"nav\">
-          <a class = \"nav_link\" href=\"#\">Home</a>
-          <a class = \"nav_link\" href=\"#\">Shop by age</a>
-          <a class = \"nav_link\" href=\"#\">Shop by category</a>
-          <a class = \"nav_link\" href=\"#\">Contact</a>
-          <a class = \"nav_link\" href=\"#\">Registration</a>
+          <a class = \"nav_link\" href=\"/\">Home</a>
+          <a class = \"nav_link\" href=\"/shop_by_age\">Shop by age</a>
+          <a class = \"nav_link\" href=\"/shop_by_category\">Shop by category</a>
+          <a class = \"nav_link\" href=\"/contact\">Contact</a>
+          <a class = \"nav_link\" href=\"/registration\">Registration</a>
 
 
         </nav>
@@ -445,6 +445,6 @@ class __TwigTemplate_2b66cc7fafb8806d95be777bfe55e474684afb4a0f41f812f1774777b27
 
   </style>
 {% endblock %}
-", "index.html.twig", "/var/www/symfony_docker/templates/index.html.twig");
+", "index.html.twig", "/home/dev/Desktop/symfony_docker/app/templates/index.html.twig");
     }
 }
