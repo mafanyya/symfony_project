@@ -29,7 +29,6 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
         $this->blocks = [
             'head' => [$this, 'block_head'],
             'body' => [$this, 'block_body'],
-            'stylesheets' => [$this, 'block_stylesheets'],
         ];
     }
 
@@ -41,18 +40,17 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
         // line 1
         $this->displayBlock('head', $context, $blocks);
-        // line 13
+        // line 14
         echo "g
 
 
 ";
-        // line 16
+        // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 61
-        echo "
-";
         // line 62
-        $this->displayBlock('stylesheets', $context, $blocks);
+        echo "
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -73,7 +71,11 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
   <meta name=\"viewport\"
         content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-  <link rel=\"stylesheet\" href=\"assets/css/styles.css\">
+  <link rel=\"stylesheet\" href=\"../public/css/styles.css\">
+  <link href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\"/>
   <title>Homepage</title>
 </head>
 
@@ -83,14 +85,14 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
     }
 
-    // line 16
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 17
+        // line 18
         echo "<body>
 
 <header class = \"header\">
@@ -140,128 +142,6 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
     }
 
-    // line 62
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 63
-        echo "  <style>
-    body{
-      margin:0;
-      font-size:15px;
-      line-height:1.6;
-      color:#333;
-    }
-
-    :before,
-    :after{
-      box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-      margin: 0;
-    }
-
-    .container{
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-
-    }
-
-    .intro{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 100%;
-      height: 100vh;
-
-      background:
-        /*  url(\"https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg?cs=srgb&dl=pexels-pixabay-255514.jpg&fm=jpg\")*/
-        /*center no-repeat;*/
-      -webkit-background-size: cover;
-      background-size:cover;
-
-    }
-
-    .main_inner{
-      width: 100%;
-      max-width: 880px;
-
-    }
-    .main_slogan{
-      color:#2c3e50;
-      text-decoration: none;
-      font-size: 55px;
-      font-weight: 700;
-      text-transform: uppercase;
-
-    }
-
-    .header{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index: 1000;
-    }
-    .header_inner{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header_logo{
-      display: inline-block;
-      vertical-align: center;
-      font-size:30px;
-      font-weight:700;
-      color:#2c3e50;
-
-    }
-
-    .header_logo_image{
-      vertical-align: center;
-      width: 100px;
-    }
-    .nav{
-      font-size:14px;
-      text-transform: uppercase;
-      transition: color .2s linear;
-    }
-    .nav_link{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 15px;
-      color:#2c3e50;
-      text-decoration: none;
-      position: relative;
-    }
-    .nav_link:after{
-      content: \"\";
-      display: block;
-      width:100%;
-      height: 3px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      background-color: #2c3e50;
-
-    }
-    .nav_link:hover{
-      color: #2980b9;
-    }
-
-  </style>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "contact.html.twig";
@@ -269,7 +149,7 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
     public function getDebugInfo()
     {
-        return array (  151 => 63,  144 => 62,  94 => 17,  87 => 16,  69 => 2,  62 => 1,  55 => 62,  52 => 61,  50 => 16,  45 => 13,  43 => 1,);
+        return array (  96 => 18,  89 => 17,  77 => 10,  67 => 2,  60 => 1,  51 => 62,  49 => 17,  44 => 14,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -282,7 +162,8 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
   <meta name=\"viewport\"
         content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-  <link rel=\"stylesheet\" href=\"assets/css/styles.css\">
+  <link rel=\"stylesheet\" href=\"../public/css/styles.css\">
+  <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
   <title>Homepage</title>
 </head>
 
@@ -335,116 +216,7 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
 {% endblock %}
 
-{% block stylesheets %}
-  <style>
-    body{
-      margin:0;
-      font-size:15px;
-      line-height:1.6;
-      color:#333;
-    }
 
-    :before,
-    :after{
-      box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-      margin: 0;
-    }
-
-    .container{
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-
-    }
-
-    .intro{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 100%;
-      height: 100vh;
-
-      background:
-        /*  url(\"https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg?cs=srgb&dl=pexels-pixabay-255514.jpg&fm=jpg\")*/
-        /*center no-repeat;*/
-      -webkit-background-size: cover;
-      background-size:cover;
-
-    }
-
-    .main_inner{
-      width: 100%;
-      max-width: 880px;
-
-    }
-    .main_slogan{
-      color:#2c3e50;
-      text-decoration: none;
-      font-size: 55px;
-      font-weight: 700;
-      text-transform: uppercase;
-
-    }
-
-    .header{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index: 1000;
-    }
-    .header_inner{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header_logo{
-      display: inline-block;
-      vertical-align: center;
-      font-size:30px;
-      font-weight:700;
-      color:#2c3e50;
-
-    }
-
-    .header_logo_image{
-      vertical-align: center;
-      width: 100px;
-    }
-    .nav{
-      font-size:14px;
-      text-transform: uppercase;
-      transition: color .2s linear;
-    }
-    .nav_link{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 15px;
-      color:#2c3e50;
-      text-decoration: none;
-      position: relative;
-    }
-    .nav_link:after{
-      content: \"\";
-      display: block;
-      width:100%;
-      height: 3px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      background-color: #2c3e50;
-
-    }
-    .nav_link:hover{
-      color: #2980b9;
-    }
-
-  </style>
-{% endblock %}
-", "contact.html.twig", "/home/dev/Desktop/symfony_docker/app/templates/contact.html.twig");
+", "contact.html.twig", "/var/www/symfony_docker/templates/contact.html.twig");
     }
 }

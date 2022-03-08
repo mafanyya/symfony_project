@@ -29,7 +29,6 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         $this->blocks = [
             'head' => [$this, 'block_head'],
             'body' => [$this, 'block_body'],
-            'stylesheets' => [$this, 'block_stylesheets'],
         ];
     }
 
@@ -51,8 +50,51 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         // line 61
         echo "
 ";
-        // line 62
-        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 70
+        echo "
+";
+        // line 78
+        echo "
+";
+        // line 83
+        echo "
+";
+        // line 85
+        echo "
+";
+        // line 90
+        echo "
+";
+        // line 93
+        echo "
+";
+        // line 99
+        echo "
+";
+        // line 101
+        echo "
+";
+        // line 105
+        echo "
+";
+        // line 113
+        echo "
+";
+        // line 115
+        echo "
+";
+        // line 134
+        echo "
+";
+        // line 136
+        echo "
+";
+        // line 164
+        echo "
+";
+        // line 169
+        echo "
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -73,7 +115,10 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
     <meta name=\"viewport\"
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"stylesheet\" href=\"assets/css/styles.css\">
+    <link href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\"/>
     <title>Homepage</title>
   </head>
 
@@ -140,128 +185,6 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     }
 
-    // line 62
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 63
-        echo "  <style>
-    body{
-      margin:0;
-      font-size:15px;
-      line-height:1.6;
-      color:#333;
-    }
-
-    :before,
-    :after{
-      box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-      margin: 0;
-    }
-
-    .container{
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-
-    }
-
-    .intro{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 100%;
-      height: 100vh;
-
-      background:
-    /*  url(\"https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg?cs=srgb&dl=pexels-pixabay-255514.jpg&fm=jpg\")*/
-    /*center no-repeat;*/
-      -webkit-background-size: cover;
-      background-size:cover;
-
-    }
-
-    .main_inner{
-      width: 100%;
-      max-width: 880px;
-
-    }
-    .main_slogan{
-      color:#2c3e50;
-      text-decoration: none;
-      font-size: 55px;
-      font-weight: 700;
-      text-transform: uppercase;
-
-    }
-
-    .header{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index: 1000;
-    }
-    .header_inner{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header_logo{
-      display: inline-block;
-      vertical-align: center;
-      font-size:30px;
-      font-weight:700;
-      color:#2c3e50;
-
-    }
-
-    .header_logo_image{
-      vertical-align: center;
-      width: 100px;
-    }
-    .nav{
-      font-size:14px;
-      text-transform: uppercase;
-      transition: color .2s linear;
-    }
-    .nav_link{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 15px;
-      color:#2c3e50;
-      text-decoration: none;
-      position: relative;
-    }
-    .nav_link:after{
-      content: \"\";
-      display: block;
-      width:100%;
-      height: 3px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      background-color: #2c3e50;
-
-    }
-    .nav_link:hover{
-      color: #2980b9;
-    }
-
-  </style>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "index.html.twig";
@@ -269,7 +192,7 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     public function getDebugInfo()
     {
-        return array (  151 => 63,  144 => 62,  94 => 17,  87 => 16,  69 => 2,  62 => 1,  55 => 62,  52 => 61,  50 => 16,  45 => 13,  43 => 1,);
+        return array (  139 => 17,  132 => 16,  120 => 9,  111 => 2,  104 => 1,  96 => 169,  93 => 164,  90 => 136,  87 => 134,  84 => 115,  81 => 113,  78 => 105,  75 => 101,  72 => 99,  69 => 93,  66 => 90,  63 => 85,  60 => 83,  57 => 78,  54 => 70,  51 => 61,  49 => 16,  44 => 13,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -282,7 +205,7 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
     <meta name=\"viewport\"
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link rel=\"stylesheet\" href=\"assets/css/styles.css\">
+    <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
     <title>Homepage</title>
   </head>
 
@@ -335,116 +258,116 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
 {% endblock %}
 
-{% block stylesheets %}
-  <style>
-    body{
-      margin:0;
-      font-size:15px;
-      line-height:1.6;
-      color:#333;
-    }
+{#{% block stylesheets %}#}
+{#  <style>#}
+{#    body{#}
+{#      margin:0;#}
+{#      font-size:15px;#}
+{#      line-height:1.6;#}
+{#      color:#333;#}
+{#    }#}
 
-    :before,
-    :after{
-      box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-      margin: 0;
-    }
+{#    :before,#}
+{#    :after{#}
+{#      box-sizing:border-box;#}
+{#    }#}
+{#    h1,h2,h3,h4.h5,h6{#}
+{#      margin: 0;#}
+{#    }#}
 
-    .container{
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
+{#    .container{#}
+{#      width: 100%;#}
+{#      max-width: 1200px;#}
+{#      margin: 0 auto;#}
 
-    }
+{#    }#}
 
-    .intro{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+{#    .intro{#}
+{#      display: flex;#}
+{#      flex-direction: column;#}
+{#      justify-content: center;#}
 
-      width: 100%;
-      height: 100vh;
+{#      width: 100%;#}
+{#      height: 100vh;#}
 
-      background:
-    /*  url(\"https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg?cs=srgb&dl=pexels-pixabay-255514.jpg&fm=jpg\")*/
-    /*center no-repeat;*/
-      -webkit-background-size: cover;
-      background-size:cover;
+{#      background:#}
+{#    /*  url(\"https://images.pexels.com/photos/255514/pexels-photo-255514.jpeg?cs=srgb&dl=pexels-pixabay-255514.jpg&fm=jpg\")*/#}
+{#    /*center no-repeat;*/#}
+{#      -webkit-background-size: cover;#}
+{#      background-size:cover;#}
 
-    }
+{#    }#}
 
-    .main_inner{
-      width: 100%;
-      max-width: 880px;
+{#    .main_inner{#}
+{#      width: 100%;#}
+{#      max-width: 880px;#}
 
-    }
-    .main_slogan{
-      color:#2c3e50;
-      text-decoration: none;
-      font-size: 55px;
-      font-weight: 700;
-      text-transform: uppercase;
+{#    }#}
+{#    .main_slogan{#}
+{#      color:#2c3e50;#}
+{#      text-decoration: none;#}
+{#      font-size: 55px;#}
+{#      font-weight: 700;#}
+{#      text-transform: uppercase;#}
 
-    }
+{#    }#}
 
-    .header{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index: 1000;
-    }
-    .header_inner{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header_logo{
-      display: inline-block;
-      vertical-align: center;
-      font-size:30px;
-      font-weight:700;
-      color:#2c3e50;
+{#    .header{#}
+{#      position:absolute;#}
+{#      top:0;#}
+{#      left:0;#}
+{#      right:0;#}
+{#      z-index: 1000;#}
+{#    }#}
+{#    .header_inner{#}
+{#      display:flex;#}
+{#      justify-content: space-between;#}
+{#      align-items: center;#}
+{#    }#}
+{#    .header_logo{#}
+{#      display: inline-block;#}
+{#      vertical-align: center;#}
+{#      font-size:30px;#}
+{#      font-weight:700;#}
+{#      color:#2c3e50;#}
 
-    }
+{#    }#}
 
-    .header_logo_image{
-      vertical-align: center;
-      width: 100px;
-    }
-    .nav{
-      font-size:14px;
-      text-transform: uppercase;
-      transition: color .2s linear;
-    }
-    .nav_link{
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 15px;
-      color:#2c3e50;
-      text-decoration: none;
-      position: relative;
-    }
-    .nav_link:after{
-      content: \"\";
-      display: block;
-      width:100%;
-      height: 3px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      background-color: #2c3e50;
+{#    .header_logo_image{#}
+{#      vertical-align: center;#}
+{#      width: 100px;#}
+{#    }#}
+{#    .nav{#}
+{#      font-size:14px;#}
+{#      text-transform: uppercase;#}
+{#      transition: color .2s linear;#}
+{#    }#}
+{#    .nav_link{#}
+{#      display: inline-block;#}
+{#      vertical-align: top;#}
+{#      margin: 0 15px;#}
+{#      color:#2c3e50;#}
+{#      text-decoration: none;#}
+{#      position: relative;#}
+{#    }#}
+{#    .nav_link:after{#}
+{#      content: \"\";#}
+{#      display: block;#}
+{#      width:100%;#}
+{#      height: 3px;#}
+{#      position: absolute;#}
+{#      top: 100%;#}
+{#      left: 0;#}
+{#      z-index: 1;#}
+{#      background-color: #2c3e50;#}
 
-    }
-    .nav_link:hover{
-      color: #2980b9;
-    }
+{#    }#}
+{#    .nav_link:hover{#}
+{#      color: #2980b9;#}
+{#    }#}
 
-  </style>
-{% endblock %}
-", "index.html.twig", "/home/dev/Desktop/symfony_docker/app/templates/index.html.twig");
+{#  </style>#}
+{#{% endblock %}#}
+", "index.html.twig", "/var/www/symfony_docker/templates/index.html.twig");
     }
 }

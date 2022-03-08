@@ -68,6 +68,6 @@ class __TwigTemplate_99659d995bf181574e4935f8b8c95470400aeae7d3263b083ab4b86ccdb
 {% extends 'index.html.twig' %}
 
 
-", "base.html.twig", "/home/dev/Desktop/symfony_docker/app/templates/base.html.twig");
+", "base.html.twig", "/var/www/symfony_docker/templates/base.html.twig");
     }
 }
