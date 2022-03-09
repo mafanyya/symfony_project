@@ -40,14 +40,14 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
         // line 1
         $this->displayBlock('head', $context, $blocks);
-        // line 14
+        // line 18
         echo "g
 
 
 ";
-        // line 17
+        // line 21
         $this->displayBlock('body', $context, $blocks);
-        // line 62
+        // line 66
         echo "
 
 ";
@@ -76,6 +76,10 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
         // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
   <title>Homepage</title>
 </head>
 
@@ -85,14 +89,14 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
     }
 
-    // line 17
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
+        // line 22
         echo "<body>
 
 <header class = \"header\">
@@ -149,7 +153,7 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
 
     public function getDebugInfo()
     {
-        return array (  96 => 18,  89 => 17,  77 => 10,  67 => 2,  60 => 1,  51 => 62,  49 => 17,  44 => 14,  42 => 1,);
+        return array (  100 => 22,  93 => 21,  77 => 10,  67 => 2,  60 => 1,  51 => 66,  49 => 21,  44 => 18,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -164,6 +168,10 @@ class __TwigTemplate_32c4ba8461f4366cb657be49366abe92e1f42f9c31b16250af906b2049e
   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
   <link rel=\"stylesheet\" href=\"../public/css/styles.css\">
   <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
   <title>Homepage</title>
 </head>
 

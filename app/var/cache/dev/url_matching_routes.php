@@ -8,12 +8,12 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/shop_by_age' => [[['_route' => 'shop_by_age', '_controller' => 'App\\Controller\\LuckyController::shop_by_age'], null, null, null, false, false, null]],
-        '/shop_by_category' => [[['_route' => 'shop_by_category', '_controller' => 'App\\Controller\\LuckyController::shop_by_category'], null, null, null, false, false, null]],
-        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\LuckyController::contact'], null, null, null, false, false, null]],
-        '/registration' => [[['_route' => 'registration', '_controller' => 'App\\Controller\\LuckyController::registration'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'root', '_controller' => 'App\\Controller\\QuoteController::index'], null, null, null, false, false, null]],
-        '/siema' => [[['_route' => 'cokolwiek', '_controller' => 'App\\Controller\\QuoteController::costam'], null, null, null, false, false, null]],
+        '/by-age' => [[['_route' => 'by-age', '_controller' => 'App\\Controller\\ByAgeController::byAge'], null, null, null, false, false, null]],
+        '/by-brand' => [[['_route' => 'by-brand', '_controller' => 'App\\Controller\\ByBrandController::byBrand'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::hotDeals'], null, null, null, false, false, null]],
+        '/hot-deals' => [[['_route' => 'hot-deals', '_controller' => 'App\\Controller\\HotDealsController::hotDeals'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'root', '_controller' => 'App\\Controller\\ShopToysController::index'], null, null, null, false, false, null]],
+        '/shop-toys' => [[['_route' => 'shop-toys', '_controller' => 'App\\Controller\\ShopToysController::shopToys'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

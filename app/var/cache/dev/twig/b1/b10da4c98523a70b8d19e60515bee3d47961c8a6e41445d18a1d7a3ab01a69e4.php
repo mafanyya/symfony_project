@@ -40,59 +40,59 @@ class __TwigTemplate_a0867f37a916748791aac866af27f1cca9c4357b7848f756b7b62952c8f
 
         // line 1
         $this->displayBlock('head', $context, $blocks);
-        // line 13
+        // line 17
         echo "g
 
 
 ";
-        // line 16
+        // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 61
+        // line 65
         echo "
 ";
-        // line 70
+        // line 74
         echo "
 ";
-        // line 78
+        // line 82
         echo "
 ";
-        // line 83
+        // line 87
         echo "
 ";
-        // line 85
+        // line 89
         echo "
 ";
-        // line 90
+        // line 94
         echo "
 ";
-        // line 93
+        // line 97
         echo "
 ";
-        // line 99
-        echo "
-";
-        // line 101
+        // line 103
         echo "
 ";
         // line 105
         echo "
 ";
-        // line 113
+        // line 109
         echo "
 ";
-        // line 115
+        // line 117
         echo "
 ";
-        // line 134
+        // line 119
         echo "
 ";
-        // line 136
+        // line 138
         echo "
 ";
-        // line 164
+        // line 140
         echo "
 ";
-        // line 169
+        // line 168
+        echo "
+";
+        // line 173
         echo "
 ";
         
@@ -119,6 +119,10 @@ class __TwigTemplate_a0867f37a916748791aac866af27f1cca9c4357b7848f756b7b62952c8f
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
   <title>Homepage</title>
 </head>
 
@@ -128,14 +132,14 @@ class __TwigTemplate_a0867f37a916748791aac866af27f1cca9c4357b7848f756b7b62952c8f
 
     }
 
-    // line 16
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 17
+        // line 21
         echo "<body>
 
 <header class = \"header\">
@@ -192,7 +196,7 @@ class __TwigTemplate_a0867f37a916748791aac866af27f1cca9c4357b7848f756b7b62952c8f
 
     public function getDebugInfo()
     {
-        return array (  139 => 17,  132 => 16,  120 => 9,  111 => 2,  104 => 1,  96 => 169,  93 => 164,  90 => 136,  87 => 134,  84 => 115,  81 => 113,  78 => 105,  75 => 101,  72 => 99,  69 => 93,  66 => 90,  63 => 85,  60 => 83,  57 => 78,  54 => 70,  51 => 61,  49 => 16,  44 => 13,  42 => 1,);
+        return array (  143 => 21,  136 => 20,  120 => 9,  111 => 2,  104 => 1,  96 => 173,  93 => 168,  90 => 140,  87 => 138,  84 => 119,  81 => 117,  78 => 109,  75 => 105,  72 => 103,  69 => 97,  66 => 94,  63 => 89,  60 => 87,  57 => 82,  54 => 74,  51 => 65,  49 => 20,  44 => 17,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -206,6 +210,10 @@ class __TwigTemplate_a0867f37a916748791aac866af27f1cca9c4357b7848f756b7b62952c8f
         content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
   <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
   <title>Homepage</title>
 </head>
 

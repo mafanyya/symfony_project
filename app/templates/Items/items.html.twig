@@ -1,0 +1,62 @@
+{% extends 'index.html.twig' %}
+
+{% block body %}
+
+  <div class = "intro_items">
+    <div class="container">
+      <div class="items_inner">
+        <div class="intro_bar">
+
+          {% if type is defined  %}
+
+            {% if type == 'shoptoys' %}
+              <h1>Shop Toys</h1>
+            {% elseif type == 'byage'%}
+              <h1>By Age</h1>
+            {% elseif type == 'bybrand'%}
+              <h1>By brand</h1>
+            {% else %}
+              <h1>Page not found!</h1>
+            {% endif %}
+          {% else %}
+            <h1>Page not found!</h1>
+          {% endif %}
+
+        </div>
+        <div class="sorting_bar"></div>
+        <div class="items_bar"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
+{#<h1>Items</h1>
+      {% if type is defined  %}
+
+        {% if type == 'shoptoys' %}
+          <h1>Shop Toys</h1>
+        {% elseif type == 'byage'%}
+          <h1>By Age</h1>
+        {% elseif type == 'bybrand'%}
+          <h1>By brand</h1>
+        {% else %}
+          <h1>Page not found!</h1>
+        {% endif %}
+      {% else %}
+        <h1>Page not found!</h1>
+      {% endif %}#}
+
+
+{#1 - intro_bar
+  2 - sorting_bar
+  3 - items_bar#}
+
+
+
+
+
+
