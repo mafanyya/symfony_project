@@ -65,6 +65,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/doctrine/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/asset" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

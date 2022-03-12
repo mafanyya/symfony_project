@@ -69,33 +69,29 @@ class __TwigTemplate_8f35fad39974a978b8ca17be9ac01b707ac42617bf879b1faf62c33d8b9
             echo "
             ";
             // line 12
-            if (((isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 12, $this->source); })()) == "shoptoys")) {
+            if (((isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 12, $this->source); })()) == "bycategory")) {
                 // line 13
-                echo "              <h1>Shop Toys</h1>
+                echo "              <h1>By category</h1>
+
             ";
-            } elseif ((            // line 14
-(isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 14, $this->source); })()) == "byage")) {
-                // line 15
+            } elseif ((            // line 15
+(isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 15, $this->source); })()) == "byage")) {
+                // line 16
                 echo "              <h1>By Age</h1>
             ";
-            } elseif ((            // line 16
-(isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 16, $this->source); })()) == "bybrand")) {
-                // line 17
-                echo "              <h1>By brand</h1>
-            ";
             } else {
-                // line 19
+                // line 18
                 echo "              <h1>Page not found!</h1>
             ";
             }
-            // line 21
+            // line 20
             echo "          ";
         } else {
-            // line 22
+            // line 21
             echo "            <h1>Page not found!</h1>
           ";
         }
-        // line 24
+        // line 23
         echo "
         </div>
         <div class=\"sorting_bar\"></div>
@@ -124,7 +120,7 @@ class __TwigTemplate_8f35fad39974a978b8ca17be9ac01b707ac42617bf879b1faf62c33d8b9
 
     public function getDebugInfo()
     {
-        return array (  99 => 24,  95 => 22,  92 => 21,  88 => 19,  84 => 17,  82 => 16,  79 => 15,  77 => 14,  74 => 13,  72 => 12,  69 => 11,  67 => 10,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  95 => 23,  91 => 21,  88 => 20,  84 => 18,  80 => 16,  78 => 15,  74 => 13,  72 => 12,  69 => 11,  67 => 10,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -140,12 +136,11 @@ class __TwigTemplate_8f35fad39974a978b8ca17be9ac01b707ac42617bf879b1faf62c33d8b9
 
           {% if type is defined  %}
 
-            {% if type == 'shoptoys' %}
-              <h1>Shop Toys</h1>
+            {% if type == 'bycategory' %}
+              <h1>By category</h1>
+
             {% elseif type == 'byage'%}
               <h1>By Age</h1>
-            {% elseif type == 'bybrand'%}
-              <h1>By brand</h1>
             {% else %}
               <h1>Page not found!</h1>
             {% endif %}

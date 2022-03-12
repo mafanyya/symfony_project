@@ -16,6 +16,22 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PASSWORD: symfony
+      PMA_USER: symfony
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+    depends_on:
+      - database
 
   php:
     container_name: php

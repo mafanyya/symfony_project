@@ -184,14 +184,20 @@
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ByAgeController"/>
       </call>
     </service>
-    <service id="App\Controller\ByBrandController" class="App\Controller\ByBrandController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\ByCategoryController" class="App\Controller\ByCategoryController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ByBrandController"/>
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ByCategoryController"/>
       </call>
     </service>
-    <service id="App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ContactController"/>
+      </call>
+    </service>
     <service id="App\Controller\HotDealsController" class="App\Controller\HotDealsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -199,18 +205,15 @@
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\HotDealsController"/>
       </call>
     </service>
-    <service id="App\Controller\ShopToysController" class="App\Controller\ShopToysController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ShopToysController"/>
-      </call>
-    </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\DataFixtures\QuoteFixture" class="App\DataFixtures\QuoteFixture" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
+    </service>
+    <service id="App\Repository\ItemRepository" class="App\Repository\ItemRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\QuoteRepository" class="App\Repository\QuoteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -1653,7 +1656,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.sB4VGft"/>
+      <argument type="service" id=".service_locator.AEnB3hr"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2483,19 +2486,21 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ByAgeController" class="App\Controller\ByAgeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ByAgeController" class="App\Controller\ByAgeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ByAgeController" class="App\Controller\ByAgeController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ByBrandController" class="App\Controller\ByBrandController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ByBrandController" class="App\Controller\ByBrandController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ByBrandController" class="App\Controller\ByBrandController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ByCategoryController" class="App\Controller\ByCategoryController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ByCategoryController" class="App\Controller\ByCategoryController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ByCategoryController" class="App\Controller\ByCategoryController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HotDealsController" class="App\Controller\HotDealsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HotDealsController" class="App\Controller\HotDealsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HotDealsController" class="App\Controller\HotDealsController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ShopToysController" class="App\Controller\ShopToysController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ShopToysController" class="App\Controller\ShopToysController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ShopToysController" class="App\Controller\ShopToysController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\QuoteFixture" class="App\DataFixtures\QuoteFixture" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\QuoteFixture" class="App\DataFixtures\QuoteFixture" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ItemRepository" class="App\Repository\ItemRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ItemRepository" class="App\Repository\ItemRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\QuoteRepository" class="App\Repository\QuoteRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\QuoteRepository" class="App\Repository\QuoteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -2884,9 +2889,10 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.sB4VGft" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.AEnB3hr" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\ItemRepository" type="service_closure" id="App\Repository\ItemRepository"/>
         <argument key="App\Repository\QuoteRepository" type="service_closure" id="App\Repository\QuoteRepository"/>
       </argument>
     </service>
@@ -2918,21 +2924,21 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
-    <service id=".service_locator.l1ae.Qz.App\Controller\ByBrandController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\ByBrandController"/>
-      <argument>App\Controller\ByBrandController</argument>
+    <service id=".service_locator.l1ae.Qz.App\Controller\ByCategoryController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ByCategoryController"/>
+      <argument>App\Controller\ByCategoryController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.l1ae.Qz" method="withContext"/>
+    </service>
+    <service id=".service_locator.l1ae.Qz.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
+      <argument>App\Controller\ContactController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
     <service id=".service_locator.l1ae.Qz.App\Controller\HotDealsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HotDealsController"/>
       <argument>App\Controller\HotDealsController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.l1ae.Qz" method="withContext"/>
-    </service>
-    <service id=".service_locator.l1ae.Qz.App\Controller\ShopToysController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\ShopToysController"/>
-      <argument>App\Controller\ShopToysController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>

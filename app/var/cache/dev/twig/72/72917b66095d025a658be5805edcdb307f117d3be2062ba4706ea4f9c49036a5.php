@@ -47,12 +47,12 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 ";
         // line 19
         $this->displayBlock('header', $context, $blocks);
-        // line 44
+        // line 43
         echo "
   ";
-        // line 45
+        // line 44
         $this->displayBlock('body', $context, $blocks);
-        // line 66
+        // line 65
         echo "
 
 ";
@@ -115,9 +115,8 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         </div>
         <nav class = \"nav\">
           <a class = \"nav_link\" href=\"/\">Home</a>
-          <a class = \"nav_link\" href=\"/shop-toys\">Shop toys</a>
+          <a class = \"nav_link\" href=\"/by-category\">By category</a>
           <a class = \"nav_link\" href=\"/by-age\">By age</a>
-          <a class = \"nav_link\" href=\"/by-brand\">By brand</a>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
         </nav>
       </div>
@@ -129,14 +128,14 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     }
 
-    // line 45
+    // line 44
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 46
+        // line 45
         echo "  <body>
 
   <div class = \"intro\">
@@ -169,7 +168,7 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     public function getDebugInfo()
     {
-        return array (  140 => 46,  133 => 45,  103 => 20,  96 => 19,  81 => 9,  72 => 2,  65 => 1,  56 => 66,  54 => 45,  51 => 44,  49 => 19,  45 => 17,  43 => 1,);
+        return array (  139 => 45,  132 => 44,  103 => 20,  96 => 19,  81 => 9,  72 => 2,  65 => 1,  56 => 65,  54 => 44,  51 => 43,  49 => 19,  45 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -208,9 +207,8 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         </div>
         <nav class = \"nav\">
           <a class = \"nav_link\" href=\"/\">Home</a>
-          <a class = \"nav_link\" href=\"/shop-toys\">Shop toys</a>
+          <a class = \"nav_link\" href=\"/by-category\">By category</a>
           <a class = \"nav_link\" href=\"/by-age\">By age</a>
-          <a class = \"nav_link\" href=\"/by-brand\">By brand</a>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
         </nav>
       </div>

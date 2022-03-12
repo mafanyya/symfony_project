@@ -65,6 +65,7 @@
       <path value="$PROJECT_DIR$/app/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/sql-formatter" />
       <path value="$PROJECT_DIR$/app/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/asset" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
