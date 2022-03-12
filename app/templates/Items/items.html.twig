@@ -23,9 +23,19 @@
 
         </div>
         <div class="sorting_bar"></div>
-        <div class="items_bar"></div>
+
+        <div class="items_bar">
+
+          {% for item in items %}
+            <img src="{{ item.img }}">
+            <p> {{ item.name }}</p>
+          {% endfor %}
+        </div>
+
 
       </div>
+
+
 
     </div>
   </div>
