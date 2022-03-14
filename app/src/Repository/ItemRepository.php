@@ -45,6 +45,18 @@ class ItemRepository extends ServiceEntityRepository
         }
     }
 
+
+  public function findItemsByCategory($categoryName)
+  {
+    return $this->createQueryBuilder('items')
+      ->select('items', 'category')
+      ->leftJoin('items.categories', 'category')
+      ->andWhere('category.name = :categoryName')
+      ->setParameter('categoryName', $categoryName)
+      ->getQuery()
+      ->getResult()
+      ;
+  }
     // /**
     //  * @return Item[] Returns an array of Item objects
     //  */

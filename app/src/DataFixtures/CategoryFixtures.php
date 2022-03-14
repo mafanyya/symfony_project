@@ -14,57 +14,52 @@ class CategoryFixtures extends Fixture
     // $manager->persist($product);
 
     $category1 = new Category();
-    $category1->setName('action-figures-and-playsets');
+    $category1->setName('Action figures');
     $manager->persist($category1);
 
     $category2 = new Category();
-    $category2->setName('baby-toddler-and-preschool-learning-toys');
+    $category2->setName('Baby and preschool toys');
     $manager->persist($category2);
 
     $category3 = new Category();
-    $category3->setName('bikes-scooters-and-ride-ons');
+    $category3->setName('Bikes and scooters');
     $manager->persist($category3);
 
     $category4 = new Category();
-    $category4->setName('building-sets-and-blocks');
+    $category4->setName('Building sets');
     $manager->persist($category4);
 
     $category5 = new Category();
-    $category5->setName('dolls-collectibles-and-stuffed-animals');
+    $category5->setName('Dolls and-stuffed animals');
     $manager->persist($category5);
 
     $category6 = new Category();
-    $category6->setName('games-and-puzzles');
+    $category6->setName('Games and puzzles');
     $manager->persist($category6);
 
     $category7 = new Category();
-    $category7->setName('kids-arts-and-crafts');
+    $category7->setName('Arts and crafts');
     $manager->persist($category7);
 
     $category8 = new Category();
-    $category8->setName('learning');
+    $category8->setName('Learning');
     $manager->persist($category8);
 
     $category9 = new Category();
-    $category9->setName('outdoor-play');
+    $category9->setName('Outdoor play');
     $manager->persist($category9);
 
     $category10 = new Category();
-    $category10->setName('pretend-play-and-dress-up');
+    $category10->setName('Pretend play');
     $manager->persist($category10);
 
     $category11 = new Category();
-    $category11->setName('steam-toys');
+    $category11->setName('Steam toys');
     $manager->persist($category11);
 
     $category12 = new Category();
-    $category12->setName('vehicles-and-remote-control');
+    $category12->setName('Remote control toys');
     $manager->persist($category12);
-
-    $category13 = new Category();
-    $category13->setName('the-character-shop');
-    $manager->persist($category13);
-
 
     $manager->flush();
   }

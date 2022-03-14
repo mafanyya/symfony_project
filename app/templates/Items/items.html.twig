@@ -7,19 +7,7 @@
       <div class="items_inner">
         <div class="intro_bar">
 
-          {% if type is defined  %}
-
-            {% if type == 'bycategory' %}
-              <h1>By category</h1>
-
-            {% elseif type == 'byage'%}
-              <h1>By Age</h1>
-            {% else %}
-              <h1>Page not found!</h1>
-            {% endif %}
-          {% else %}
-            <h1>Page not found!</h1>
-          {% endif %}
+          <h1>{{ name }}</h1>
 
         </div>
         <div class="sorting_bar"></div>
@@ -30,6 +18,13 @@
             <img src="{{ item.img }}">
             <p> {{ item.name }}</p>
           {% endfor %}
+
+
+
+         {#  {% for legoItem in legoItems %}
+            <img src="{{ legoItem.img }}">
+            <p> {{ legoItem.name }}</p>
+          {% endfor %}#}
         </div>
 
 

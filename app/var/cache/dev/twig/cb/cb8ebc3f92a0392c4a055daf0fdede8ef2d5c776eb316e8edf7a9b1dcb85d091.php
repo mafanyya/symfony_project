@@ -85,6 +85,6 @@ class __TwigTemplate_24cf51aa45798f340ff3effbb767249ab1c294919fa2fe642c4b6164b12
 {% block body %}
   <h1>contact</h1>
 {% endblock %}
-", "Contact/contact.html.twig", "/home/dev/Desktop/symfony_docker/app/templates/Contact/contact.html.twig");
+", "Contact/contact.html.twig", "/var/www/symfony_docker/templates/Contact/contact.html.twig");
     }
 }

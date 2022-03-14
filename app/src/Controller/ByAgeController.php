@@ -2,12 +2,22 @@
 
 namespace App\Controller;
 
+use App\Repository\CategoryRepository;
+use App\Repository\ItemRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ByAgeController extends AbstractController
 {
+  private CategoryRepository $categoryRepository;
+  private ItemRepository $itemRepository;
+
+  public function __construct(CategoryRepository $categoryRepository, ItemRepository $itemRepository) {
+    $this->categoryRepository = $categoryRepository;
+    $this->itemRepository = $itemRepository;
+  }
+
   /**
    * @Route ("/by-age", name="by-age")
    * @return Response
@@ -17,7 +27,8 @@ class ByAgeController extends AbstractController
 
 
     return $this->render('Items/items.html.twig', [
-      'type' => 'byage'
+      'name' => 'By age',
+      'items' => $this->itemRepository->findAll(),
     ]);
   }
 
@@ -29,6 +40,7 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
+      'name' => '0-24 months'
     ]);
   }
 
@@ -40,6 +52,7 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
+      'name' => '3-4 years'
     ]);
   }
 
@@ -51,6 +64,7 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
+      'name' => '5-7 years'
     ]);
   }
 
@@ -62,6 +76,7 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
+      'name'=>'8-10 years'
     ]);
   }
 
@@ -73,6 +88,7 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
+      'name'=>'11+ years'
     ]);
   }
 

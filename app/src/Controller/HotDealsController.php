@@ -14,7 +14,9 @@ class HotDealsController extends AbstractController
    */
   public function hotDeals(): Response
   {
-    return $this->render('HotDeals/hot_deals.html.twig');
+    return $this->render('HotDeals/hot_deals.html.twig', [
+      'name'=>'Hot deals'
+    ]);
   }
 
 }

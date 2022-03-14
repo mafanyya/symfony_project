@@ -180,6 +180,8 @@
     <service id="App\Controller\ByAgeController" class="App\Controller\ByAgeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\CategoryRepository"/>
+      <argument type="service" id="App\Repository\ItemRepository"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ByAgeController"/>
       </call>

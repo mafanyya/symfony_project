@@ -165,6 +165,6 @@ class __TwigTemplate_108ae9e12b2067a2a365f37cfa833100f235e015b3f69a8a33479e40c85
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/home/dev/Desktop/symfony_docker/app/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/var/www/symfony_docker/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

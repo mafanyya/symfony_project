@@ -47,12 +47,12 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 ";
         // line 19
         $this->displayBlock('header', $context, $blocks);
-        // line 43
+        // line 77
         echo "
   ";
-        // line 44
+        // line 78
         $this->displayBlock('body', $context, $blocks);
-        // line 65
+        // line 99
         echo "
 
 ";
@@ -115,9 +115,37 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         </div>
         <nav class = \"nav\">
           <a class = \"nav_link\" href=\"/\">Home</a>
-          <a class = \"nav_link\" href=\"/by-category\">By category</a>
-          <a class = \"nav_link\" href=\"/by-age\">By age</a>
+
+          <div class=\"dropdown\">
+
+          <a class = \"nav_link \" href=\"/by-category\">By category</a>
+
+            <div class=\"dropdown-content\">
+                <a href=\"/by-category/action-figures\">action figures</a>
+                <a href=\"/by-category/baby-and-preschool-toys\">baby and preschool toys</a>
+                <a href=\"/by-category/bikes-and-scooters\">bikes and scooters</a>
+                <a href=\"/by-category/building-sets\">building sets</a>
+                <a href=\"/by-category/dolls-and-stuffed-animals\">dolls and stuffed animals</a>
+                <a href=\"/by-category/games-and-puzzles\">games and puzzles</a>
+                <a href=\"/by-category/arts-and-crafts\">arts and crafts</a>
+                <a href=\"/by-category/learning\">learning</a>
+                <a href=\"/by-category/outdoor-play\">outdoor play</a>
+                <a href=\"/by-category/pretend-play\">pretend play</a>
+                <a href=\"/by-category/steam-toys\">steam toys</a>
+                <a href=\"/by-category/remote-control-toys\">remote control toys</a>
+            </div>
+          </div>
+
+
+          <a class = \"nav_link \" href=\"/by-age\">By age</a>
+
+
+           ";
+        // line 68
+        echo "
+
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
+
         </nav>
       </div>
     </div>
@@ -128,14 +156,14 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     }
 
-    // line 44
+    // line 78
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 45
+        // line 79
         echo "  <body>
 
   <div class = \"intro\">
@@ -168,7 +196,7 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
 
     public function getDebugInfo()
     {
-        return array (  139 => 45,  132 => 44,  103 => 20,  96 => 19,  81 => 9,  72 => 2,  65 => 1,  56 => 65,  54 => 44,  51 => 43,  49 => 19,  45 => 17,  43 => 1,);
+        return array (  167 => 79,  160 => 78,  145 => 68,  103 => 20,  96 => 19,  81 => 9,  72 => 2,  65 => 1,  56 => 99,  54 => 78,  51 => 77,  49 => 19,  45 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -207,9 +235,43 @@ class __TwigTemplate_147a6cd482d655576b18e0b900536494f25bc1a3b8125fb396282d1c145
         </div>
         <nav class = \"nav\">
           <a class = \"nav_link\" href=\"/\">Home</a>
-          <a class = \"nav_link\" href=\"/by-category\">By category</a>
-          <a class = \"nav_link\" href=\"/by-age\">By age</a>
+
+          <div class=\"dropdown\">
+
+          <a class = \"nav_link \" href=\"/by-category\">By category</a>
+
+            <div class=\"dropdown-content\">
+                <a href=\"/by-category/action-figures\">action figures</a>
+                <a href=\"/by-category/baby-and-preschool-toys\">baby and preschool toys</a>
+                <a href=\"/by-category/bikes-and-scooters\">bikes and scooters</a>
+                <a href=\"/by-category/building-sets\">building sets</a>
+                <a href=\"/by-category/dolls-and-stuffed-animals\">dolls and stuffed animals</a>
+                <a href=\"/by-category/games-and-puzzles\">games and puzzles</a>
+                <a href=\"/by-category/arts-and-crafts\">arts and crafts</a>
+                <a href=\"/by-category/learning\">learning</a>
+                <a href=\"/by-category/outdoor-play\">outdoor play</a>
+                <a href=\"/by-category/pretend-play\">pretend play</a>
+                <a href=\"/by-category/steam-toys\">steam toys</a>
+                <a href=\"/by-category/remote-control-toys\">remote control toys</a>
+            </div>
+          </div>
+
+
+          <a class = \"nav_link \" href=\"/by-age\">By age</a>
+
+
+           {#  <div class=\"dropdown-age-content\">
+              <a href=\"/by-age/0--24-months\">0-24 months</a>
+              <a href=\"/by-age/3--4-years\">3-4 years</a>
+              <a href=\"/by-age/5--7-years\">5-7 years</a>
+              <a href=\"/by-age/8--10-years\">8-10 years</a>
+              <a href=\"/by-age/11-years-and-up\">11+ years</a>
+            </div>
+           #}
+
+
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
+
         </nav>
       </div>
     </div>
