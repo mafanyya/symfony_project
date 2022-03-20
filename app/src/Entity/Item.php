@@ -30,6 +30,10 @@ class Item
     #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'items')]
     private $categories;
 
+    #[ORM\ManyToOne(targetEntity: Age::class, inversedBy: 'items')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $age;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -108,6 +112,18 @@ class Item
     public function removeCategory(Category $category): self
     {
         $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    public function getAge(): ?Age
+    {
+        return $this->age;
+    }
+
+    public function setAge(?Age $age): self
+    {
+        $this->age = $age;
 
         return $this;
     }

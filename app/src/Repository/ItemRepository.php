@@ -57,6 +57,19 @@ class ItemRepository extends ServiceEntityRepository
       ->getResult()
       ;
   }
+
+public function findItemsByAge($ageName)
+{
+    return $this->createQueryBuilder('items')
+        ->select('items', 'age')
+        ->leftJoin('items.age', 'age')
+        ->andWhere('age.name = :ageName')
+        ->setParameter('ageName', $ageName)
+        ->getQuery()
+        ->getResult()
+        ;
+}
+
     // /**
     //  * @return Item[] Returns an array of Item objects
     //  */

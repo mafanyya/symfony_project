@@ -10,17 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap" rel="stylesheet">
-
     <title>Homepage</title>
   </head>
 {% endblock %}
-
 
 {% block header %}
   <header class = "header">
 
     <div class = "container">
+
       <div class="header_inner">
+
+
         <div class="header_logo">
           <a href="/"><svg width="147" height="75" viewBox="0 0 147 75" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.0346 6.98567C14.0346 7.95803 13.8434 8.86643 13.461 9.71085C13.1041 10.5553 12.6069 11.2973 11.9696 11.9371C11.3322 12.5512 10.5801 13.0502 9.71332 13.434C8.87201 13.7922 7.96696 13.9713 6.99818 13.9713C6.0294 13.9713 5.1116 13.7922 4.2448 13.434C3.40349 13.0502 2.66415 12.5512 2.02679 11.9371C1.41493 11.2973 0.917794 10.5553 0.53538 9.71085C0.17846 8.86643 0 7.95803 0 6.98567C0 6.03889 0.17846 5.1433 0.53538 4.29887C0.917794 3.42886 1.41493 2.6868 2.02679 2.07267C2.66415 1.43296 3.40349 0.933982 4.2448 0.575742C5.1116 0.191914 6.0294 0 6.99818 0C7.96696 0 8.87201 0.191914 9.71332 0.575742C10.5801 0.933982 11.3322 1.43296 11.9696 2.07267C12.6069 2.6868 13.1041 3.42886 13.461 4.29887C13.8434 5.1433 14.0346 6.03889 14.0346 6.98567ZM12.2373 59.2631H1.72086V18.1551H12.2373V59.2631Z" fill="#39C59B"/>
@@ -30,14 +31,13 @@
             </svg>
           </a>
         </div>
+
+
         <nav class = "nav">
           <a class = "nav_link" href="/">Home</a>
-
-          <div class="dropdown">
-
+          <div class="dropdown-category">
           <a class = "nav_link " href="/by-category">By category</a>
- +
-            <div class="dropdown-content">
+            <div class="dropdown-category-content">
                 <a href="/by-category/action-figures">action figures</a>
                 <a href="/by-category/baby-and-preschool-toys">baby and preschool toys</a>
                 <a href="/by-category/bikes-and-scooters">bikes and scooters</a>
@@ -52,23 +52,19 @@
                 <a href="/by-category/remote-control-toys">remote control toys</a>
             </div>
           </div>
-
-
-          <a class = "nav_link " href="/by-age">By age</a>
-
-
-           {#  <div class="dropdown-age-content">
-              <a href="/by-age/0--24-months">0-24 months</a>
-              <a href="/by-age/3--4-years">3-4 years</a>
-              <a href="/by-age/5--7-years">5-7 years</a>
-              <a href="/by-age/8--10-years">8-10 years</a>
-              <a href="/by-age/11-years-and-up">11+ years</a>
-            </div>
-           #}
-
-
+              <div class="dropdown-age">
+              <a class = "nav_link " href="/by-age">By age</a>
+                <div class="dropdown-age-content">
+                  <a href="/by-age/0--24-months">0-24 months</a>
+                  <a href="/by-age/3--4-years">3-4 years</a>
+                  <a href="/by-age/5--7-years">5-7 years</a>
+                  <a href="/by-age/8--10-years">8-10 years</a>
+                  <a href="/by-age/11-years-and-up">11+ years</a>
+                </div>
+              </div>
           <a class = "nav_link" href="/hot-deals">Hot deals</a>
-
+            <a class = "nav_link" href="/register">Registration</a>
+            <a class = "nav_link" href="/login">Login</a>
         </nav>
       </div>
     </div>
@@ -95,6 +91,231 @@
   </body>
 </html>
 
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+    body{
+    margin:0;
+    font-size:20px;
+    line-height:1.6;
+    color:#333;
+    font-family: 'Righteous', cursive;
+    }
+
+    :before,
+    :after{
+    box-sizing:border-box;
+    }
+    h1,h2,h3,h4.h5,h6{
+    margin: 0;
+    }
+
+
+    .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    }
+
+    .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    -webkit-background-size:  cover;
+    background-size:cover;
+
+    }
+
+    .main_inner{
+    font-family: 'Ribeye', cursive;
+    width: 100%;
+    max-width: 880px;
+
+    }
+    .main_slogan {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+
+
+    /*HEADER*/
+    .header{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    }
+    .header_inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    horiz-align: center;
+    }
+    .header_logo{
+    margin: 10px 10px;
+    display: inline-block;
+    vertical-align: center;
+    width: 100px;
+
+    }
+
+    /*NAVIGATION*/
+    .nav{
+     display:flex;
+    font-size:14px;
+    text-transform: uppercase;
+    transition: color .2s linear;
+    }
+    .nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color:#2c3e50;
+    text-decoration: none;
+    position: relative;
+    }
+    .nav_link:after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #2c3e50;
+
+    }
+    .nav_link:hover{
+    color: #2980b9;
+    }
+
+
+    /*ITEMS*/
+
+    .intro_items{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 70vh;
+
+    -webkit-background-size:  cover;
+    background-size:cover;
+    }
+
+    .items_inner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+    .intro_bar {
+    background-color: #4E30A6;
+    color: #FFFFFF;
+    grid-area: 1 / 1 / 2 / 8;
+
+
+
+    text-align: center;
+    }
+    .sorting_bar {
+    border-style:solid;
+    border-color: #47B1C9;
+    grid-area: 2 / 1 / 8 / 3;
+    }
+    .items_bar {
+    border-style:solid;
+    border-color: #47B1C9;
+    grid-area: 2 / 3 / 8 / 8;
+
+    }
+
+    .dropdown {
+    float: left;
+    overflow: hidden;
+    }
+
+
+
+    .dropdown-category-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    .dropdown-category-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+
+    .dropdown-category-content a:hover {
+    background-color: #ddd;
+    }
+
+
+    .dropdown-category:hover .dropdown-category-content {
+    display: block;
+    min-height: 200px;}
+
+
+
+    .dropdown-age-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-age-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-age-content a:hover {
+        background-color: #ddd;
+    }
+
+
+    .dropdown-age:hover .dropdown-age-content {
+        display: block;
+        min-height: 200px;}
+
+
+    .form_inner{
+        margin-top:300px;
+        font-size:25px;
+    }
+
+    </style>
 {% endblock %}
 
 

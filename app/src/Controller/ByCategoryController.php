@@ -37,9 +37,11 @@ class ByCategoryController extends AbstractController
    */
   public function actionFigures():Response
   {
+      $items = $this->itemRepository->findItemsByCategory('Action figures');
+
     return $this->render('Items/items.html.twig', [
       'name'=> 'Action figures',
-      'items' => $this->itemRepository->findItemsByCategory('Action figures'),
+      'items' => $this->itemRepository->findItemsByCategory('Action figures')
     ]);
 
   }

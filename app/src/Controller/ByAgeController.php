@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\CategoryRepository;
+use App\Repository\AgeRepository;
 use App\Repository\ItemRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,11 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ByAgeController extends AbstractController
 {
-  private CategoryRepository $categoryRepository;
+  private AgeRepository $ageRepository;
   private ItemRepository $itemRepository;
 
-  public function __construct(CategoryRepository $categoryRepository, ItemRepository $itemRepository) {
-    $this->categoryRepository = $categoryRepository;
+  public function __construct(AgeRepository $ageRepository, ItemRepository $itemRepository) {
+    $this->ageRepository = $ageRepository;
     $this->itemRepository = $itemRepository;
   }
 
@@ -24,8 +24,6 @@ class ByAgeController extends AbstractController
    */
   public function byAge(): Response
   {
-
-
     return $this->render('Items/items.html.twig', [
       'name' => 'By age',
       'items' => $this->itemRepository->findAll(),
@@ -33,14 +31,15 @@ class ByAgeController extends AbstractController
   }
 
   /**
-   * @Route ("/by-age/0--24-months", name="by-age1")
+   * @Route ("/by-age/0--2-years", name="by-age1")
    * @return Response
    */
   public function age_02(): Response
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '0-24 months'
+      'name' => '0-24 months',
+        'items' => $this->itemRepository->findItemsByAge('0-2 years'),
     ]);
   }
 
@@ -52,7 +51,8 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '3-4 years'
+      'name' => '3-4 years',
+        'items' => $this->itemRepository->findItemsByAge('3-4 years'),
     ]);
   }
 
@@ -64,7 +64,8 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '5-7 years'
+      'name' => '5-7 years',
+        'items' => $this->itemRepository->findItemsByAge('5-7 years'),
     ]);
   }
 
@@ -76,7 +77,8 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name'=>'8-10 years'
+      'name'=>'8-10 years',
+        'items' => $this->itemRepository->findItemsByAge('8-10 years'),
     ]);
   }
 
@@ -88,7 +90,8 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name'=>'11+ years'
+      'name'=>'11+ years',
+        'items' => $this->itemRepository->findItemsByAge('11+ years'),
     ]);
   }
 

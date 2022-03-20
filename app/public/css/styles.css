@@ -186,8 +186,13 @@ h1,h2,h3,h4.h5,h6{
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-category-content {
+.dropdown:hover .dropdown-content {
   display: block;
+  min-height: 200px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  min-height: 200px;
 }
 
 
