@@ -66,7 +66,6 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
 
         // line 4
         echo "
-
   <body></body>
 
   <div class = \"intro_items\">
@@ -75,8 +74,8 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         <div class=\"intro_bar\">
 
           <h1>";
-        // line 13
-        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 13, $this->source); })()), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 12, $this->source); })()), "html", null, true);
         echo "</h1>
 
         </div>
@@ -85,30 +84,26 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         <div class=\"items_bar\">
 
           ";
-        // line 20
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 19, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 21
+            // line 20
             echo "            <img src=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "img", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "img", [], "any", false, false, false, 20), "html", null, true);
             echo "\">
             <p> ";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 22), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 21), "html", null, true);
             echo "</p>
           ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 23
         echo "
-
-
-         ";
-        // line 31
-        echo "        </div>
+        </div>
 
 
       </div>
@@ -139,7 +134,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
 
     public function getDebugInfo()
     {
-        return array (  111 => 31,  106 => 24,  98 => 22,  93 => 21,  89 => 20,  79 => 13,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  105 => 23,  97 => 21,  92 => 20,  88 => 19,  78 => 12,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -147,7 +142,6 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         return new Source("{% extends 'index.html.twig' %}
 
 {% block body %}
-
 
   <body></body>
 
@@ -168,12 +162,6 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
             <p> {{ item.name }}</p>
           {% endfor %}
 
-
-
-         {#  {% for legoItem in legoItems %}
-            <img src=\"{{ legoItem.img }}\">
-            <p> {{ legoItem.name }}</p>
-          {% endfor %}#}
         </div>
 
 
