@@ -22,6 +22,7 @@ return [
     'by-age4' => [[], ['_controller' => 'App\\Controller\\ByAgeController::age_810'], [], [['text', '/by-age/8--10-years']], [], [], []],
     'by-age5' => [[], ['_controller' => 'App\\Controller\\ByAgeController::age_11'], [], [['text', '/by-age/11-years-and-up']], [], [], []],
     'by-category' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::byCategory'], [], [['text', '/by-category']], [], [], []],
+    'show-one' => [['id'], ['_controller' => 'App\\Controller\\ByCategoryController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/show']], [], [], []],
     'by-category1' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::actionFigures'], [], [['text', '/by-category/action-figures']], [], [], []],
     'by-category2' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::babyAndPreschoolToys'], [], [['text', '/by-category/baby-and-preschool-toys']], [], [], []],
     'by-category3' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::bikesAndScooters'], [], [['text', '/by-category/bikes-and-scooters']], [], [], []],
@@ -39,4 +40,5 @@ return [
     'hot-deals' => [[], ['_controller' => 'App\\Controller\\HotDealsController::hotDeals'], [], [['text', '/hot-deals']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
+    'test' => [[], ['_controller' => 'App\\Controller\\TestController::hotDeals'], [], [['text', '/test']], [], [], []],
 ];

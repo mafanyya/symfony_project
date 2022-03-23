@@ -125,7 +125,7 @@ class CacheConfig
     }
     
     /**
-     * @default 'database_connection'
+     * @default null
      * @param ParamConfigurator|mixed $value
      * @return $this
      */

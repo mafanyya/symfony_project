@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Item;
 use App\Repository\CategoryRepository;
 use App\Repository\ItemRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -25,13 +27,26 @@ class ByCategoryController extends AbstractController
   public function byCategory(): Response
   {
 
+      // info about current logged user
+      $currentUser = $this->getUser();
+
     return $this->render('Items/items.html.twig', [
       'items' => $this->itemRepository->findAll(),
       'name' => 'By category'
 
     ]);
   }
-  /**
+
+    #[Route('/show/{id}', name: 'show-one')]
+    public function show(Item $item): Response
+    {
+        $item = $this->itemRepository->find($item);
+        return $this->render('Items/show.html.twig', [
+            'item' => $item,
+        ]);
+    }
+
+    /**
    * @Route ("/by-category/action-figures", name="by-category1")
    * @return Response
    */
@@ -46,7 +61,7 @@ class ByCategoryController extends AbstractController
 
   }
 
-  /**
+    /**
    * @Route ("/by-category/baby-and-preschool-toys", name="by-category2")
    * @return Response
    */
@@ -58,7 +73,7 @@ class ByCategoryController extends AbstractController
     ]);
 
   }
-  /**
+    /**
    * @Route ("/by-category/bikes-and-scooters", name="by-category3")
    * @return Response
    */

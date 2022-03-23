@@ -102,26 +102,28 @@ class __TwigTemplate_3e6b9e8c103cca40633c72a698cd7132d022ab368d88d5896fca9d47dbe
         }
         // line 17
         echo "
+    <h1>Login</h1>
+
     <form action=\"";
-        // line 18
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\" method=\"post\">
         <label for=\"username\">Email:</label>
         <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 20
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 20, $this->source); })()), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 22, $this->source); })()), "html", null, true);
         echo "\"/>
 
         <label for=\"password\">Password:</label>
         <input type=\"password\" id=\"password\" name=\"_password\"/>
 
         <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 25
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
         ";
-        // line 29
+        // line 31
         echo "
         <button type=\"submit\">login</button>
     </form>
@@ -146,7 +148,7 @@ class __TwigTemplate_3e6b9e8c103cca40633c72a698cd7132d022ab368d88d5896fca9d47dbe
 
     public function getDebugInfo()
     {
-        return array (  125 => 29,  120 => 25,  112 => 20,  107 => 18,  104 => 17,  98 => 15,  96 => 14,  88 => 8,  78 => 7,  59 => 5,  36 => 2,);
+        return array (  127 => 31,  122 => 27,  114 => 22,  109 => 20,  104 => 17,  98 => 15,  96 => 14,  88 => 8,  78 => 7,  59 => 5,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -167,6 +169,8 @@ class __TwigTemplate_3e6b9e8c103cca40633c72a698cd7132d022ab368d88d5896fca9d47dbe
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
+
+    <h1>Login</h1>
 
     <form action=\"{{ path('login') }}\" method=\"post\">
         <label for=\"username\">Email:</label>

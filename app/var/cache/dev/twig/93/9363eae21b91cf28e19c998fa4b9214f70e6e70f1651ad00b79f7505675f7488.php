@@ -50,17 +50,18 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 ";
         // line 17
         $this->displayBlock('header', $context, $blocks);
-        // line 73
+        // line 76
         echo "
   ";
-        // line 74
+        // line 77
         $this->displayBlock('body', $context, $blocks);
-        // line 95
+        // line 98
         echo "
+
 ";
-        // line 96
+        // line 100
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 320
+        // line 325
         echo "
 
 ";
@@ -159,7 +160,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
               <div class=\"dropdown-age\">
               <a class = \"nav_link \" href=\"/by-age\">By age</a>
                 <div class=\"dropdown-age-content\">
-                  <a href=\"/by-age/0--24-months\">0-24 months</a>
+                  <a href=\"/by-age/0--2-years\">0-24 months</a>
                   <a href=\"/by-age/3--4-years\">3-4 years</a>
                   <a href=\"/by-age/5--7-years\">5-7 years</a>
                   <a href=\"/by-age/8--10-years\">8-10 years</a>
@@ -169,7 +170,10 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
             <a class = \"nav_link\" href=\"/register\">Registration</a>
             <a class = \"nav_link\" href=\"/login\">Login</a>
+            <a class = \"nav_link\" href=\"/test\">Test</a>
         </nav>
+
+
       </div>
     </div>
   </header>
@@ -182,7 +186,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 74
+    // line 77
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -192,7 +196,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 75
+        // line 78
         echo "  <body>
 
   <div class = \"intro\">
@@ -221,7 +225,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 96
+    // line 100
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -231,8 +235,11 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 97
+        // line 101
         echo "    <style>
+
+        /*<<<<<<BODY>>>>>>*/
+
     body{
     margin:0;
     font-size:20px;
@@ -249,13 +256,13 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     margin: 0;
     }
 
-
     .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-
     }
+
+        /*<<<<<<HOMEPAGE>>>>>>*/
 
     .intro{
     display: flex;
@@ -284,11 +291,9 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     text-transform: uppercase;
     }
 
-
-
-    /*HEADER*/
+        /*<<<<<<HEADER>>>>>>*/
     .header{
-    position:absolute;
+
     top:0;
     left:0;
     right:0;
@@ -308,7 +313,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    /*NAVIGATION*/
+        /*<<<<<<NAVIGATION>>>>>>*/
     .nav{
      display:flex;
     font-size:14px;
@@ -339,14 +344,72 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     color: #2980b9;
     }
 
+        .dropdown-category-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
 
-    /*ITEMS*/
+        .dropdown-category-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-category-content a:hover {
+            background-color: #ddd;
+        }
+
+
+        .dropdown-category:hover .dropdown-category-content {
+            display: block;
+            min-height: 200px;}
+
+
+
+        .dropdown-age-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-age-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-age-content a:hover {
+            background-color: #ddd;
+        }
+
+
+        .dropdown-age:hover .dropdown-age-content {
+            display: block;
+            min-height: 200px;}
+
+
+        /*<<<<<<ITEMS>>>>>>*/
 
     .intro_items{
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    flex-flow:column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
     width: 100%;
     height: 70vh;
@@ -356,6 +419,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     }
 
     .items_inner {
+    order:4;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -389,65 +453,6 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     overflow: hidden;
     }
 
-
-
-    .dropdown-category-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    }
-
-    .dropdown-category-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    }
-
-    .dropdown-category-content a:hover {
-    background-color: #ddd;
-    }
-
-
-    .dropdown-category:hover .dropdown-category-content {
-    display: block;
-    min-height: 200px;}
-
-
-
-    .dropdown-age-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-age-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
-
-    .dropdown-age-content a:hover {
-        background-color: #ddd;
-    }
-
-
-    .dropdown-age:hover .dropdown-age-content {
-        display: block;
-        min-height: 200px;}
-
-
     .form_inner{
         margin-top:300px;
         font-size:25px;
@@ -470,7 +475,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     public function getDebugInfo()
     {
-        return array (  235 => 97,  225 => 96,  196 => 75,  186 => 74,  122 => 18,  112 => 17,  95 => 9,  86 => 2,  76 => 1,  64 => 320,  62 => 96,  59 => 95,  57 => 74,  54 => 73,  52 => 17,  49 => 16,  47 => 1,);
+        return array (  239 => 101,  229 => 100,  200 => 78,  190 => 77,  123 => 18,  113 => 17,  96 => 9,  87 => 2,  77 => 1,  65 => 325,  63 => 100,  59 => 98,  57 => 77,  54 => 76,  52 => 17,  49 => 16,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -532,7 +537,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
               <div class=\"dropdown-age\">
               <a class = \"nav_link \" href=\"/by-age\">By age</a>
                 <div class=\"dropdown-age-content\">
-                  <a href=\"/by-age/0--24-months\">0-24 months</a>
+                  <a href=\"/by-age/0--2-years\">0-24 months</a>
                   <a href=\"/by-age/3--4-years\">3-4 years</a>
                   <a href=\"/by-age/5--7-years\">5-7 years</a>
                   <a href=\"/by-age/8--10-years\">8-10 years</a>
@@ -542,7 +547,10 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
             <a class = \"nav_link\" href=\"/register\">Registration</a>
             <a class = \"nav_link\" href=\"/login\">Login</a>
+            <a class = \"nav_link\" href=\"/test\">Test</a>
         </nav>
+
+
       </div>
     </div>
   </header>
@@ -570,8 +578,12 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
 {% endblock %}
 
+
 {% block stylesheets %}
     <style>
+
+        /*<<<<<<BODY>>>>>>*/
+
     body{
     margin:0;
     font-size:20px;
@@ -588,13 +600,13 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     margin: 0;
     }
 
-
     .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-
     }
+
+        /*<<<<<<HOMEPAGE>>>>>>*/
 
     .intro{
     display: flex;
@@ -623,11 +635,9 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     text-transform: uppercase;
     }
 
-
-
-    /*HEADER*/
+        /*<<<<<<HEADER>>>>>>*/
     .header{
-    position:absolute;
+
     top:0;
     left:0;
     right:0;
@@ -647,7 +657,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    /*NAVIGATION*/
+        /*<<<<<<NAVIGATION>>>>>>*/
     .nav{
      display:flex;
     font-size:14px;
@@ -678,14 +688,72 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     color: #2980b9;
     }
 
+        .dropdown-category-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
 
-    /*ITEMS*/
+        .dropdown-category-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-category-content a:hover {
+            background-color: #ddd;
+        }
+
+
+        .dropdown-category:hover .dropdown-category-content {
+            display: block;
+            min-height: 200px;}
+
+
+
+        .dropdown-age-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-age-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-age-content a:hover {
+            background-color: #ddd;
+        }
+
+
+        .dropdown-age:hover .dropdown-age-content {
+            display: block;
+            min-height: 200px;}
+
+
+        /*<<<<<<ITEMS>>>>>>*/
 
     .intro_items{
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    flex-flow:column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
     width: 100%;
     height: 70vh;
@@ -695,6 +763,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     }
 
     .items_inner {
+    order:4;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -727,65 +796,6 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     float: left;
     overflow: hidden;
     }
-
-
-
-    .dropdown-category-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    }
-
-    .dropdown-category-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    }
-
-    .dropdown-category-content a:hover {
-    background-color: #ddd;
-    }
-
-
-    .dropdown-category:hover .dropdown-category-content {
-    display: block;
-    min-height: 200px;}
-
-
-
-    .dropdown-age-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-age-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
-
-    .dropdown-age-content a:hover {
-        background-color: #ddd;
-    }
-
-
-    .dropdown-age:hover .dropdown-age-content {
-        display: block;
-        min-height: 200px;}
-
 
     .form_inner{
         margin-top:300px;
