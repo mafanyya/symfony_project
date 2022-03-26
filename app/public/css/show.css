@@ -1,0 +1,69 @@
+
+/*||||||SHOW STYLES|||||*/
+
+.row{
+    display: flex;
+    border: dashed black;
+}
+
+.item_image{
+    width: 40%;
+}
+
+.item_inf{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_name{
+    padding-top: 50px ;
+    height: 48%;
+    padding-left: 20px;
+    font-size:25px
+
+}
+.add_review{
+
+    border-top: 2px solid #D1D1D1;
+    border-bottom: 2px solid #D1D1D1;
+    height: 18%;
+    margin-top: 25px;
+    padding-left:20px;
+    font-size: 25px;
+}
+
+.review-button {
+    width:26%;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    background-color: #47B1C9;
+    color:white;
+
+
+}
+
+.review_text {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+
+}
+
+.price{
+
+    height: 18%;
+    padding:  0;
+    text-align: center;
+    font-size: 30px;
+}
+.buy_now{
+
+    height: 18%;
+    padding: 20px 0;
+    text-align: center;
+}
+.buy_now_button{
+}

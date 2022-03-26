@@ -38,7 +38,16 @@ class ByCategoryController extends AbstractController
   }
 
     #[Route('/show/{id}', name: 'show-one')]
-    public function show(Item $item): Response
+    public function show($id): Response
+    {
+        $item = $this->itemRepository->find($id);
+        return $this->render('Items/show.html.twig', [
+            'item' => $item,
+        ]);
+    }
+
+    #[Route('/showw/{id}', name: 'showw-one')]
+    public function showw(Item $item): Response
     {
         $item = $this->itemRepository->find($item);
         return $this->render('Items/show.html.twig', [

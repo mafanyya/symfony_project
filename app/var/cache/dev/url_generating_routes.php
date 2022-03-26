@@ -23,6 +23,7 @@ return [
     'by-age5' => [[], ['_controller' => 'App\\Controller\\ByAgeController::age_11'], [], [['text', '/by-age/11-years-and-up']], [], [], []],
     'by-category' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::byCategory'], [], [['text', '/by-category']], [], [], []],
     'show-one' => [['id'], ['_controller' => 'App\\Controller\\ByCategoryController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/show']], [], [], []],
+    'showw-one' => [['id'], ['_controller' => 'App\\Controller\\ByCategoryController::showw'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/showw']], [], [], []],
     'by-category1' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::actionFigures'], [], [['text', '/by-category/action-figures']], [], [], []],
     'by-category2' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::babyAndPreschoolToys'], [], [['text', '/by-category/baby-and-preschool-toys']], [], [], []],
     'by-category3' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::bikesAndScooters'], [], [['text', '/by-category/bikes-and-scooters']], [], [], []],

@@ -45,23 +45,23 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
         // line 1
         $this->displayBlock('head', $context, $blocks);
-        // line 16
+        // line 18
         echo "
 ";
-        // line 17
+        // line 19
         $this->displayBlock('header', $context, $blocks);
-        // line 76
+        // line 78
         echo "
   ";
-        // line 77
+        // line 79
         $this->displayBlock('body', $context, $blocks);
-        // line 98
+        // line 100
         echo "
 
 ";
-        // line 100
+        // line 102
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 325
+        // line 328
         echo "
 
 ";
@@ -95,9 +95,11 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
-    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
-    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-    <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
+      <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+      <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+      <link href=\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap\" rel=\"stylesheet\">
+
     <title>Homepage</title>
   </head>
 ";
@@ -109,7 +111,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 17
+    // line 19
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -119,7 +121,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 18
+        // line 20
         echo "  <header class = \"header\">
 
     <div class = \"container\">
@@ -186,7 +188,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 77
+    // line 79
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -196,7 +198,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 78
+        // line 80
         echo "  <body>
 
   <div class = \"intro\">
@@ -225,7 +227,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 100
+    // line 102
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -235,7 +237,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 101
+        // line 103
         echo "    <style>
 
         /*<<<<<<BODY>>>>>>*/
@@ -245,7 +247,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     font-size:20px;
     line-height:1.6;
     color:#333;
-    font-family: 'Righteous', cursive;
+        font-family: 'Lato', sans-serif;
     }
 
     :before,
@@ -260,6 +262,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+
     }
 
         /*<<<<<<HOMEPAGE>>>>>>*/
@@ -475,7 +478,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     public function getDebugInfo()
     {
-        return array (  239 => 101,  229 => 100,  200 => 78,  190 => 77,  123 => 18,  113 => 17,  96 => 9,  87 => 2,  77 => 1,  65 => 325,  63 => 100,  59 => 98,  57 => 77,  54 => 76,  52 => 17,  49 => 16,  47 => 1,);
+        return array (  241 => 103,  231 => 102,  202 => 80,  192 => 79,  125 => 20,  115 => 19,  96 => 9,  87 => 2,  77 => 1,  65 => 328,  63 => 102,  59 => 100,  57 => 79,  54 => 78,  52 => 19,  49 => 18,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -489,9 +492,11 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
     <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
-    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
-    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-    <link href=\"https://fonts.googleapis.com/css2?family=Ribeye&family=Righteous&display=swap\" rel=\"stylesheet\">
+
+      <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+      <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+      <link href=\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap\" rel=\"stylesheet\">
+
     <title>Homepage</title>
   </head>
 {% endblock %}
@@ -589,7 +594,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     font-size:20px;
     line-height:1.6;
     color:#333;
-    font-family: 'Righteous', cursive;
+        font-family: 'Lato', sans-serif;
     }
 
     :before,
@@ -604,6 +609,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+
     }
 
         /*<<<<<<HOMEPAGE>>>>>>*/

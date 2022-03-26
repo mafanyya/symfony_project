@@ -1,0 +1,44 @@
+/*||||||ITEMS STYLES|||||*/
+
+.contentWrapper {
+    border: 2px solid red;
+    width: 70%;
+    height: 3500px;
+    margin: 0 auto;
+}
+.contentHeader {
+    text-align: center;
+    background-color: #218BC3;
+    height: 300px;
+}
+.itemsWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contentSorting {
+    border: 2px solid yellow;
+    width: 20%;
+    height: 500px;
+}
+.contentItems {
+    margin-left: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid green;
+    width: 77.33%;
+    height: 500px;
+    gap: 20px;
+}
+.item {
+    width: 200px;
+    height: 400px;
+    border: 2px solid black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.itemHero {
+    width:100%;
+}

@@ -22,32 +22,7 @@ h1,h2,h3,h4.h5,h6{
 
 }
 
-.intro{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-  width: 100%;
-  height: 100vh;
-
-  -webkit-background-size:  cover;
-  background-size:cover;
-
-}
-
-.main_inner{
-  font-family: 'Ribeye', cursive;
-  width: 100%;
-  max-width: 880px;
-
-}
-.main_slogan {
-  color: #2c3e50;
-  text-decoration: none;
-  font-size: 55px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
 
 
