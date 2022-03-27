@@ -41,8 +41,10 @@ class ByCategoryController extends AbstractController
     public function show($id): Response
     {
         $item = $this->itemRepository->find($id);
+
         return $this->render('Items/show.html.twig', [
             'item' => $item,
+            'name' => 'Buy toy'
         ]);
     }
 

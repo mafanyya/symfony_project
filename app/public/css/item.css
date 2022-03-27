@@ -1,12 +1,12 @@
 /*||||||ITEMS STYLES|||||*/
 
-.contentWrapper {
-    border: 2px solid red;
-    width: 70%;
-    height: 3500px;
-    margin: 0 auto;
+
+.contentHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.contentHeader {
+.container {
     text-align: center;
     background-color: #218BC3;
     height: 300px;
@@ -28,7 +28,7 @@
     flex-direction: row;
     border: 2px solid green;
     width: 77.33%;
-    height: 500px;
+    height: auto;
     gap: 20px;
 }
 .item {

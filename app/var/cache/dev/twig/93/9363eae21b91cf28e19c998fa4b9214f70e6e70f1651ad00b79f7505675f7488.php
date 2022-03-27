@@ -30,7 +30,6 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
             'head' => [$this, 'block_head'],
             'header' => [$this, 'block_header'],
             'body' => [$this, 'block_body'],
-            'stylesheets' => [$this, 'block_stylesheets'],
         ];
     }
 
@@ -45,24 +44,19 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
         // line 1
         $this->displayBlock('head', $context, $blocks);
-        // line 18
+        // line 20
         echo "
 ";
-        // line 19
+        // line 21
         $this->displayBlock('header', $context, $blocks);
-        // line 78
+        // line 80
         echo "
   ";
-        // line 79
+        // line 81
         $this->displayBlock('body', $context, $blocks);
-        // line 100
+        // line 102
         echo "
 
-";
-        // line 102
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 328
-        echo "
 
 ";
         
@@ -93,14 +87,22 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
     <link href=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/root.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
+    <link href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/index.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\"/>
+
 
       <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
       <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
       <link href=\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap\" rel=\"stylesheet\">
 
-    <title>Homepage</title>
+    <title>";
+        // line 17
+        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 17, $this->source); })()), "html", null, true);
+        echo "</title>
   </head>
 ";
         
@@ -111,7 +113,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 19
+    // line 21
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -121,7 +123,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 20
+        // line 22
         echo "  <header class = \"header\">
 
     <div class = \"container\">
@@ -170,9 +172,9 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
                 </div>
               </div>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
-            <a class = \"nav_link\" href=\"/register\">Registration</a>
-            <a class = \"nav_link\" href=\"/login\">Login</a>
-            <a class = \"nav_link\" href=\"/test\">Test</a>
+            <a class = \"nav_link\" href=\"/register\">Sign Up</a>
+            <a class = \"nav_link\" href=\"/login\">Log in</a>
+
         </nav>
 
 
@@ -188,7 +190,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 79
+    // line 81
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +200,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 80
+        // line 82
         echo "  <body>
 
   <div class = \"intro\">
@@ -227,250 +229,6 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     }
 
-    // line 102
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 103
-        echo "    <style>
-
-        /*<<<<<<BODY>>>>>>*/
-
-    body{
-    margin:0;
-    font-size:20px;
-    line-height:1.6;
-    color:#333;
-        font-family: 'Lato', sans-serif;
-    }
-
-    :before,
-    :after{
-    box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-    margin: 0;
-    }
-
-    .container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    }
-
-        /*<<<<<<HOMEPAGE>>>>>>*/
-
-    .intro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-    height: 100vh;
-
-    -webkit-background-size:  cover;
-    background-size:cover;
-
-    }
-
-    .main_inner{
-    font-family: 'Ribeye', cursive;
-    width: 100%;
-    max-width: 880px;
-
-    }
-    .main_slogan {
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 55px;
-    font-weight: 700;
-    text-transform: uppercase;
-    }
-
-        /*<<<<<<HEADER>>>>>>*/
-    .header{
-
-    top:0;
-    left:0;
-    right:0;
-    z-index: 1000;
-    }
-    .header_inner{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    horiz-align: center;
-    }
-    .header_logo{
-    margin: 10px 10px;
-    display: inline-block;
-    vertical-align: center;
-    width: 100px;
-
-    }
-
-        /*<<<<<<NAVIGATION>>>>>>*/
-    .nav{
-     display:flex;
-    font-size:14px;
-    text-transform: uppercase;
-    transition: color .2s linear;
-    }
-    .nav_link{
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 15px;
-    color:#2c3e50;
-    text-decoration: none;
-    position: relative;
-    }
-    .nav_link:after{
-    content: \"\";
-    display: block;
-    width:100%;
-    height: 3px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    background-color: #2c3e50;
-
-    }
-    .nav_link:hover{
-    color: #2980b9;
-    }
-
-        .dropdown-category-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-category-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-category-content a:hover {
-            background-color: #ddd;
-        }
-
-
-        .dropdown-category:hover .dropdown-category-content {
-            display: block;
-            min-height: 200px;}
-
-
-
-        .dropdown-age-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-age-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-age-content a:hover {
-            background-color: #ddd;
-        }
-
-
-        .dropdown-age:hover .dropdown-age-content {
-            display: block;
-            min-height: 200px;}
-
-
-        /*<<<<<<ITEMS>>>>>>*/
-
-    .intro_items{
-
-    display: flex;
-
-    flex-flow:column wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
-    height: 70vh;
-
-    -webkit-background-size:  cover;
-    background-size:cover;
-    }
-
-    .items_inner {
-    order:4;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-
-    .intro_bar {
-    background-color: #4E30A6;
-    color: #FFFFFF;
-    grid-area: 1 / 1 / 2 / 8;
-
-
-
-    text-align: center;
-    }
-    .sorting_bar {
-    border-style:solid;
-    border-color: #47B1C9;
-    grid-area: 2 / 1 / 8 / 3;
-    }
-    .items_bar {
-    border-style:solid;
-    border-color: #47B1C9;
-    grid-area: 2 / 3 / 8 / 8;
-
-    }
-
-    .dropdown {
-    float: left;
-    overflow: hidden;
-    }
-
-    .form_inner{
-        margin-top:300px;
-        font-size:25px;
-    }
-
-    </style>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "index.html.twig";
@@ -478,7 +236,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
     public function getDebugInfo()
     {
-        return array (  241 => 103,  231 => 102,  202 => 80,  192 => 79,  125 => 20,  115 => 19,  96 => 9,  87 => 2,  77 => 1,  65 => 328,  63 => 102,  59 => 100,  57 => 79,  54 => 78,  52 => 19,  49 => 18,  47 => 1,);
+        return array (  204 => 82,  194 => 81,  127 => 22,  117 => 21,  104 => 17,  94 => 10,  90 => 9,  81 => 2,  71 => 1,  58 => 102,  56 => 81,  53 => 80,  51 => 21,  48 => 20,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -491,13 +249,15 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
     <meta name=\"viewport\"
           content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">
-    <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\"/>
+    <link href=\"{{ asset('css/root.css') }}\" rel=\"stylesheet\"/>
+    <link href=\"{{ asset('css/index.css') }}\" rel=\"stylesheet\"/>
+
 
       <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
       <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
       <link href=\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap\" rel=\"stylesheet\">
 
-    <title>Homepage</title>
+    <title>{{ name }}</title>
   </head>
 {% endblock %}
 
@@ -550,9 +310,9 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
                 </div>
               </div>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
-            <a class = \"nav_link\" href=\"/register\">Registration</a>
-            <a class = \"nav_link\" href=\"/login\">Login</a>
-            <a class = \"nav_link\" href=\"/test\">Test</a>
+            <a class = \"nav_link\" href=\"/register\">Sign Up</a>
+            <a class = \"nav_link\" href=\"/login\">Log in</a>
+
         </nav>
 
 
@@ -583,233 +343,6 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
 {% endblock %}
 
-
-{% block stylesheets %}
-    <style>
-
-        /*<<<<<<BODY>>>>>>*/
-
-    body{
-    margin:0;
-    font-size:20px;
-    line-height:1.6;
-    color:#333;
-        font-family: 'Lato', sans-serif;
-    }
-
-    :before,
-    :after{
-    box-sizing:border-box;
-    }
-    h1,h2,h3,h4.h5,h6{
-    margin: 0;
-    }
-
-    .container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    }
-
-        /*<<<<<<HOMEPAGE>>>>>>*/
-
-    .intro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-    height: 100vh;
-
-    -webkit-background-size:  cover;
-    background-size:cover;
-
-    }
-
-    .main_inner{
-    font-family: 'Ribeye', cursive;
-    width: 100%;
-    max-width: 880px;
-
-    }
-    .main_slogan {
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 55px;
-    font-weight: 700;
-    text-transform: uppercase;
-    }
-
-        /*<<<<<<HEADER>>>>>>*/
-    .header{
-
-    top:0;
-    left:0;
-    right:0;
-    z-index: 1000;
-    }
-    .header_inner{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    horiz-align: center;
-    }
-    .header_logo{
-    margin: 10px 10px;
-    display: inline-block;
-    vertical-align: center;
-    width: 100px;
-
-    }
-
-        /*<<<<<<NAVIGATION>>>>>>*/
-    .nav{
-     display:flex;
-    font-size:14px;
-    text-transform: uppercase;
-    transition: color .2s linear;
-    }
-    .nav_link{
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 15px;
-    color:#2c3e50;
-    text-decoration: none;
-    position: relative;
-    }
-    .nav_link:after{
-    content: \"\";
-    display: block;
-    width:100%;
-    height: 3px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    background-color: #2c3e50;
-
-    }
-    .nav_link:hover{
-    color: #2980b9;
-    }
-
-        .dropdown-category-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-category-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-category-content a:hover {
-            background-color: #ddd;
-        }
-
-
-        .dropdown-category:hover .dropdown-category-content {
-            display: block;
-            min-height: 200px;}
-
-
-
-        .dropdown-age-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-age-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-age-content a:hover {
-            background-color: #ddd;
-        }
-
-
-        .dropdown-age:hover .dropdown-age-content {
-            display: block;
-            min-height: 200px;}
-
-
-        /*<<<<<<ITEMS>>>>>>*/
-
-    .intro_items{
-
-    display: flex;
-
-    flex-flow:column wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
-    height: 70vh;
-
-    -webkit-background-size:  cover;
-    background-size:cover;
-    }
-
-    .items_inner {
-    order:4;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-
-    .intro_bar {
-    background-color: #4E30A6;
-    color: #FFFFFF;
-    grid-area: 1 / 1 / 2 / 8;
-
-
-
-    text-align: center;
-    }
-    .sorting_bar {
-    border-style:solid;
-    border-color: #47B1C9;
-    grid-area: 2 / 1 / 8 / 3;
-    }
-    .items_bar {
-    border-style:solid;
-    border-color: #47B1C9;
-    grid-area: 2 / 3 / 8 / 8;
-
-    }
-
-    .dropdown {
-    float: left;
-    overflow: hidden;
-    }
-
-    .form_inner{
-        margin-top:300px;
-        font-size:25px;
-    }
-
-    </style>
-{% endblock %}
 
 
 ", "index.html.twig", "/var/www/symfony_docker/templates/index.html.twig");

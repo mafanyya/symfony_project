@@ -72,6 +72,7 @@ class __TwigTemplate_42f1c5a3504692823fe9feb2d8fab019f26763bf6844a57a5c9a57bac15
 
 <style>
 
+
     body{
         margin:0;
         font-size:20px;
@@ -182,6 +183,7 @@ class __TwigTemplate_42f1c5a3504692823fe9feb2d8fab019f26763bf6844a57a5c9a57bac15
 </body>
 
 <style>
+
 
     body{
         margin:0;
