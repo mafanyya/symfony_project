@@ -12,48 +12,50 @@
 {% block body %}
   <body>
   <div class="container">
-    <div class="contentHeader">
-        <div class="contentent_name">
-            <p> {{ name }} </p>
+    <div class="content_header">
+        <div class="content_name">
+            <p class = "content_name_text"> {{ name }} </p>
         </div>
-
     </div>
 
-    <div class="itemsWrapper">
-      <div class="contentSorting">
-          <p>{{ name }}</p>
-        <li>opcja</li>
-        <li>opcja</li>
-        <li>opcja</li>
-        <li>opcja</li>
-        <li>opcja</li>
-        <li>opcja</li>
-        <li>opcja</li>
+    <div class="items_wrapper">
+      <div class="content_sorting">
+          <p class = "list_name">{{ name }}</p>
+          {% for category in categories %}
+              <div class="category_name_list">
+                  <div class="list_mark">
+                  <img class = "list_mark" src="https://img.icons8.com/external-gradak-royyan-wijaya/24/000000/external-circle-gradak-music-gradak-royyan-wijaya.png"/>
+                  </div>
+              <li class = "category_name"> <a class = "category_name" href="#">{{ category.name }}</a></li>
+              </div>
+          {% endfor %}
       </div>
 
-      <div class="contentItems">
+        <div class="content_items">
 
-        {% for item in items %}
+            {% for item in items %}
 
-          <div class="item">
-              <a href="{{ path('show-one', {'id':item.id}) }}">
-              <div class="itemHeader">
+                <div class="item">
+                    <a href="{{ path('show-one', {'id':item.id}) }}">
+                        <div class="item_header">
+                            <img class="item_hero" src="{{ item.img }}">
+                            {{ item.name }}
+                            <p>{{ item.price }}</p>
+                        </div>
+                    </a>
+                    <div class="item_button">
+                        <button>
+                            Kup teraz
+                        </button>
+                    </div>
+                </div>
 
-                   <img class="itemHero" src="{{ item.img }}">
-                   {{ item.name }}
-                  <p>{{ item.price }}</p>
-              </div>
-              </a>
-              <div class="itemButton">
-                  <button>
-                     Kup teraz
-                  </button>
-              </div>
-          </div>
+            {% endfor %}
 
-        {% endfor %}
-
+        </div>
       </div>
+
+
     </div>
   </div>
   </body>

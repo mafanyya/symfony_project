@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\AgeRepository;
 use App\Repository\ItemRepository;
+use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,10 +13,12 @@ class ByAgeController extends AbstractController
 {
   private AgeRepository $ageRepository;
   private ItemRepository $itemRepository;
+  private CategoryRepository $categoryRepository;
 
-  public function __construct(AgeRepository $ageRepository, ItemRepository $itemRepository) {
+  public function __construct(AgeRepository $ageRepository, ItemRepository $itemRepository, CategoryRepository $categoryRepository) {
     $this->ageRepository = $ageRepository;
     $this->itemRepository = $itemRepository;
+    $this->categoryRepository = $categoryRepository;
   }
 
   /**
@@ -27,6 +30,7 @@ class ByAgeController extends AbstractController
     return $this->render('Items/items.html.twig', [
       'name' => 'By age',
       'items' => $this->itemRepository->findAll(),
+      'categories' => $this->categoryRepository->findAll(),
     ]);
   }
 

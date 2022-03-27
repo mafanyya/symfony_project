@@ -292,6 +292,7 @@
       <tag name="container.service_subscriber"/>
       <argument type="service" id="App\Repository\AgeRepository"/>
       <argument type="service" id="App\Repository\ItemRepository"/>
+      <argument type="service" id="App\Repository\CategoryRepository"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\ByAgeController"/>
       </call>

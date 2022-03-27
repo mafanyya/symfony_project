@@ -32,7 +32,8 @@ class ByCategoryController extends AbstractController
 
     return $this->render('Items/items.html.twig', [
       'items' => $this->itemRepository->findAll(),
-      'name' => 'By category'
+      'name' => 'By category',
+      'categories' => $this->categoryRepository->findAll(),
 
     ]);
   }
