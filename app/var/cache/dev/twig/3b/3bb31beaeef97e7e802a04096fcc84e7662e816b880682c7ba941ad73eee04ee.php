@@ -173,7 +173,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                         <div class=\"comment_form_inner\">
                         <div class=\"form_email\">
                             <label for=\"email\">email</label>
-                            <input  class = \"email_input\" id = \"email\" type=\"text\" name=\"email\">
+                            <input  class = \"email_input\" id = \"email\" type=\"email\" name=\"email\">
                         </div>
                         <div class=\"form_comment\">
                             <label for=\"comment\">comment</label>
@@ -181,8 +181,15 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                         </div>
                         <div class=\"form_rating\">
                             <label for=\"rating\">rating</label>
-                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">
-                        </div>
+                            <botton id = \"rating1\" value = 1>1</botton>
+                            <botton id = \"rating3\" value = 1>2</botton>
+                            <botton id = \"rating4\" value = 1>3</botton>
+                            <botton id = \"rating5\" value = 1>4</botton>
+                            <botton id = \"rating6\" value = 1>5</botton>
+
+";
+        // line 85
+        echo "                        </div>
                         <div class=\"form_button\">
                         <button type=\"submit\">Post Review</button>
                         </div>
@@ -198,28 +205,28 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     <p>Reviews</p>
                 </div>
                 ";
-        // line 94
+        // line 100
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 94, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 100, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 95
+            // line 101
             echo "                    <div class=\"comment\">
                         <div class=\"comment_email\">
                             ";
-            // line 97
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 97), "html", null, true);
+            // line 103
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 103), "html", null, true);
             echo "
                         </div>
                         <div class=\"comment_content\">
                             ";
-            // line 100
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 100), "html", null, true);
+            // line 106
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 106), "html", null, true);
             echo "
                         </div>
                         <div class=\"rating_content\">
                             ";
-            // line 103
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 103), "html", null, true);
+            // line 109
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 109), "html", null, true);
             echo "
                         </div>
                     </div>
@@ -228,7 +235,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 107
+        // line 113
         echo "            </div>
         </div>
     </div>
@@ -255,7 +262,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  232 => 107,  222 => 103,  216 => 100,  210 => 97,  206 => 95,  202 => 94,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  239 => 113,  229 => 109,  223 => 106,  217 => 103,  213 => 101,  209 => 100,  192 => 85,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -329,7 +336,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                         <div class=\"comment_form_inner\">
                         <div class=\"form_email\">
                             <label for=\"email\">email</label>
-                            <input  class = \"email_input\" id = \"email\" type=\"text\" name=\"email\">
+                            <input  class = \"email_input\" id = \"email\" type=\"email\" name=\"email\">
                         </div>
                         <div class=\"form_comment\">
                             <label for=\"comment\">comment</label>
@@ -337,7 +344,13 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                         </div>
                         <div class=\"form_rating\">
                             <label for=\"rating\">rating</label>
-                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">
+                            <botton id = \"rating1\" value = 1>1</botton>
+                            <botton id = \"rating3\" value = 1>2</botton>
+                            <botton id = \"rating4\" value = 1>3</botton>
+                            <botton id = \"rating5\" value = 1>4</botton>
+                            <botton id = \"rating6\" value = 1>5</botton>
+
+{#                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">#}
                         </div>
                         <div class=\"form_button\">
                         <button type=\"submit\">Post Review</button>
