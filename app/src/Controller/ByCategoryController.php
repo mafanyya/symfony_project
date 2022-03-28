@@ -2,11 +2,16 @@
 
 namespace App\Controller;
 
+use App\Entity\Comment;
 use App\Entity\Item;
+use App\Form\Type\CommentType;
 use App\Repository\CategoryRepository;
+use App\Repository\CommentRepository;
 use App\Repository\ItemRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use MongoDB\Driver\Manager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -14,11 +19,16 @@ class ByCategoryController extends AbstractController
 {
   private CategoryRepository $categoryRepository;
   private ItemRepository $itemRepository;
+  private CommentRepository $commentRepository;
 
-  public function __construct(CategoryRepository $categoryRepository, ItemRepository $itemRepository) {
+  public function __construct(CategoryRepository $categoryRepository, ItemRepository $itemRepository, CommentRepository $commentRepository) {
     $this->categoryRepository = $categoryRepository;
     $this->itemRepository = $itemRepository;
+    $this->commentRepository = $commentRepository;
   }
+
+
+
 
   /**
    * @Route ("/by-category", name="by-category")
@@ -30,22 +40,53 @@ class ByCategoryController extends AbstractController
       // info about current logged user
       $currentUser = $this->getUser();
 
+
     return $this->render('Items/items.html.twig', [
       'items' => $this->itemRepository->findAll(),
       'name' => 'By category',
+      'category_name' => 'By category',
       'categories' => $this->categoryRepository->findAll(),
 
     ]);
   }
 
     #[Route('/show/{id}', name: 'show-one')]
-    public function show($id): Response
+    public function show($id, Request $request, ManagerRegistry $doctrine): Response
     {
-        $item = $this->itemRepository->find($id);
+        if ($request->getMethod() == 'POST') {
+            // get post values from form
+            $email = $request->request->get('email');
+            $comment = $request->request->get('comment');
+            $rating = $request->request->get('rating');
+            $item = $this->itemRepository->find($id);
 
+            // create new Comment Object, persist it to the database
+            $newComment = new Comment();
+            $newComment->setEmail($email);
+            $newComment->setComment($comment);
+            $newComment->setRating($rating);
+            $newComment->setItem($item);
+            $newComment->setDuedate(new \DateTime());
+
+            $entityManager = $doctrine->getManager();
+            $entityManager->persist($newComment);
+            $entityManager->flush();
+
+            // return anything you want
+            return $this->render('Items/show.html.twig', [
+                'item' => $item,
+                'name' => 'Buy toy',
+                'categories' => $this->categoryRepository->findAll(),
+                'comments' => $this->commentRepository->findCommentsByItem($item),
+            ]);
+        }
+
+        $item = $this->itemRepository->find($id);
         return $this->render('Items/show.html.twig', [
             'item' => $item,
-            'name' => 'Buy toy'
+            'name' => 'Buy toy',
+            'categories' => $this->categoryRepository->findAll(),
+            'comments' => $this->commentRepository->findCommentsByItem($item),
         ]);
     }
 
@@ -55,6 +96,7 @@ class ByCategoryController extends AbstractController
         $item = $this->itemRepository->find($item);
         return $this->render('Items/show.html.twig', [
             'item' => $item,
+            'categories' => $this->categoryRepository->findAll(),
         ]);
     }
 
@@ -67,8 +109,10 @@ class ByCategoryController extends AbstractController
       $items = $this->itemRepository->findItemsByCategory('Action figures');
 
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Action figures',
-      'items' => $this->itemRepository->findItemsByCategory('Action figures')
+        'name' => 'By category',
+      'category_name' => 'Action figures',
+      'items' => $this->itemRepository->findItemsByCategory('Action figures'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -80,8 +124,10 @@ class ByCategoryController extends AbstractController
   public function babyAndPreschoolToys():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Baby and preschool toys',
-      'items' => $this->itemRepository->findItemsByCategory('Baby and preschool toys'),
+        'name' => 'By category',
+        'category_name' => 'Baby and preschool toys',
+        'items' => $this->itemRepository->findItemsByCategory('Baby and preschool toys'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -92,8 +138,10 @@ class ByCategoryController extends AbstractController
   public function bikesAndScooters():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Bikes and scooters',
+        'name' => 'By category',
+        'category_name' => 'Bikes and scooters',
       'items' => $this->itemRepository->findItemsByCategory('Bikes and scooters'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -105,8 +153,10 @@ class ByCategoryController extends AbstractController
   public function buildingSets():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Building sets',
+        'name' => 'By category',
+        'category_name'=> 'Building sets',
       'items' => $this->itemRepository->findItemsByCategory('Building sets'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -118,8 +168,10 @@ class ByCategoryController extends AbstractController
   public function dollsAndStuffedAnimals():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Dolls and-stuffed animals',
+        'name' => 'By category',
+        'category_name'=> 'Dolls and-stuffed animals',
       'items' => $this->itemRepository->findItemsByCategory('Dolls and-stuffed animals'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -131,8 +183,10 @@ class ByCategoryController extends AbstractController
   public function gamesAndPuzzles():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Games and puzzles',
+        'name' => 'By category',
+        'category_name' => 'Games and puzzles',
       'items' => $this->itemRepository->findItemsByCategory('Games and puzzles'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -144,8 +198,10 @@ class ByCategoryController extends AbstractController
   public function artsAndCrafts():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Arts and crafts',
+        'name' => 'By category',
+        'category_name' => 'Arts and crafts',
       'items' => $this->itemRepository->findItemsByCategory('Arts and crafts'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -157,8 +213,10 @@ class ByCategoryController extends AbstractController
   public function learning():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Learning',
+        'name' => 'By category',
+        'category_name' => 'Learning',
       'items' => $this->itemRepository->findItemsByCategory('Learning'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -170,8 +228,10 @@ class ByCategoryController extends AbstractController
   public function outdoorPlay():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Outdoor play',
+        'name' => 'By category',
+        'category_name' => 'Outdoor play',
       'items' => $this->itemRepository->findItemsByCategory('Outdoor play'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -183,8 +243,10 @@ class ByCategoryController extends AbstractController
   public function pretendPlay():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Pretend play',
+        'name' => 'By category',
+        'category_name' => 'Pretend play',
       'items' => $this->itemRepository->findItemsByCategory('Pretend play'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -196,8 +258,10 @@ class ByCategoryController extends AbstractController
   public function steamToys():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Steam toys',
+        'name' => 'By category',
+        'category_name' => 'Steam toys',
       'items' => $this->itemRepository->findItemsByCategory('Steam toys'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }
@@ -209,8 +273,10 @@ class ByCategoryController extends AbstractController
   public function remoteControlToys():Response
   {
     return $this->render('Items/items.html.twig', [
-      'name'=> 'Remote control toys',
+        'name' => 'By category',
+        'category_name' => 'Remote control toys',
       'items' => $this->itemRepository->findItemsByCategory('Remote control toys'),
+        'categories' => $this->categoryRepository->findAll(),
     ]);
 
   }

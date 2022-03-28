@@ -14,17 +14,19 @@
   <div class="container">
     <div class="content_header">
         <div class="content_name">
-            <p class = "content_name_text"> {{ name }} </p>
+            <p class = "content_name_text"> {{ category_name }} </p>
         </div>
     </div>
 
     <div class="items_wrapper">
       <div class="content_sorting">
-          <p class = "list_name">{{ name }}</p>
+          <div class="list_name">
+          <p class = "list_name_text">{{ name }}</p>
+          </div>
           {% for category in categories %}
               <div class="category_name_list">
                   <div class="list_mark">
-                  <img class = "list_mark" src="https://img.icons8.com/external-gradak-royyan-wijaya/24/000000/external-circle-gradak-music-gradak-royyan-wijaya.png"/>
+                  <img class = "list_mark" src="https://img.icons8.com/material-rounded/24/000000/sort-right.png"/>
                   </div>
               <li class = "category_name"> <a class = "category_name" href="#">{{ category.name }}</a></li>
               </div>
@@ -37,17 +39,16 @@
 
                 <div class="item">
                     <a href="{{ path('show-one', {'id':item.id}) }}">
-                        <div class="item_header">
-                            <img class="item_hero" src="{{ item.img }}">
-                            {{ item.name }}
-                            <p>{{ item.price }}</p>
+                        <div class="item_image">
+                            <img class = "item_image_content"src="{{ item.img }}" alt="">
                         </div>
+                        <div class="item_name">
+                            <p class = "item_name_text">{{ item.name }}</p>
+
+                        </div>
+
                     </a>
-                    <div class="item_button">
-                        <button>
-                            Kup teraz
-                        </button>
-                    </div>
+
                 </div>
 
             {% endfor %}

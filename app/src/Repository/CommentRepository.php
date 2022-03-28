@@ -45,6 +45,19 @@ class CommentRepository extends ServiceEntityRepository
         }
     }
 
+    public function findCommentsByItem($itemId)
+    {
+        return $this->createQueryBuilder('comments')
+            ->select('comments', 'id')
+            ->leftJoin('comments.item', 'id')
+            ->andWhere('comments.item = :item_id')
+            ->setParameter('item_id', $itemId)
+            ->getQuery()
+            ->getResult();
+
+    }
+
+
     // /**
     //  * @return Comment[] Returns an array of Comment objects
     //  */

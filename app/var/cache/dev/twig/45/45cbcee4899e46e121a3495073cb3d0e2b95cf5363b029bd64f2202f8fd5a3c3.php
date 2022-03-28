@@ -105,30 +105,32 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         <div class=\"content_name\">
             <p class = \"content_name_text\"> ";
         // line 17
-        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 17, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["category_name"]) || array_key_exists("category_name", $context) ? $context["category_name"] : (function () { throw new RuntimeError('Variable "category_name" does not exist.', 17, $this->source); })()), "html", null, true);
         echo " </p>
         </div>
     </div>
 
     <div class=\"items_wrapper\">
       <div class=\"content_sorting\">
-          <p class = \"list_name\">";
-        // line 23
-        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 23, $this->source); })()), "html", null, true);
-        echo "</p>
-          ";
+          <div class=\"list_name\">
+          <p class = \"list_name_text\">";
         // line 24
+        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 24, $this->source); })()), "html", null, true);
+        echo "</p>
+          </div>
+          ";
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 25
+            // line 27
             echo "              <div class=\"category_name_list\">
                   <div class=\"list_mark\">
-                  <img class = \"list_mark\" src=\"https://img.icons8.com/external-gradak-royyan-wijaya/24/000000/external-circle-gradak-music-gradak-royyan-wijaya.png\"/>
+                  <img class = \"list_mark\" src=\"https://img.icons8.com/material-rounded/24/000000/sort-right.png\"/>
                   </div>
               <li class = \"category_name\"> <a class = \"category_name\" href=\"#\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 29), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 31), "html", null, true);
             echo "</a></li>
               </div>
           ";
@@ -136,43 +138,39 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 34
         echo "      </div>
 
         <div class=\"content_items\">
 
             ";
-        // line 36
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 36, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 38, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 37
+            // line 39
             echo "
                 <div class=\"item\">
                     <a href=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show-one", ["id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 39)]), "html", null, true);
-            echo "\">
-                        <div class=\"item_header\">
-                            <img class=\"item_hero\" src=\"";
             // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "img", [], "any", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show-one", ["id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\">
-                            ";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 42), "html", null, true);
-            echo "
-                            <p>";
+                        <div class=\"item_image\">
+                            <img class = \"item_image_content\"src=\"";
             // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 43), "html", null, true);
-            echo "</p>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "img", [], "any", false, false, false, 43), "html", null, true);
+            echo "\" alt=\"\">
                         </div>
+                        <div class=\"item_name\">
+                            <p class = \"item_name_text\">";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 46), "html", null, true);
+            echo "</p>
+
+                        </div>
+
                     </a>
-                    <div class=\"item_button\">
-                        <button>
-                            Kup teraz
-                        </button>
-                    </div>
+
                 </div>
 
             ";
@@ -180,7 +178,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 54
+        // line 55
         echo "
         </div>
       </div>
@@ -210,7 +208,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
 
     public function getDebugInfo()
     {
-        return array (  184 => 54,  167 => 43,  163 => 42,  159 => 41,  154 => 39,  150 => 37,  146 => 36,  140 => 32,  131 => 29,  125 => 25,  121 => 24,  117 => 23,  108 => 17,  102 => 13,  92 => 12,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  182 => 55,  167 => 46,  161 => 43,  156 => 41,  152 => 39,  148 => 38,  142 => 34,  133 => 31,  127 => 27,  123 => 26,  118 => 24,  108 => 17,  102 => 13,  92 => 12,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -231,17 +229,19 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
   <div class=\"container\">
     <div class=\"content_header\">
         <div class=\"content_name\">
-            <p class = \"content_name_text\"> {{ name }} </p>
+            <p class = \"content_name_text\"> {{ category_name }} </p>
         </div>
     </div>
 
     <div class=\"items_wrapper\">
       <div class=\"content_sorting\">
-          <p class = \"list_name\">{{ name }}</p>
+          <div class=\"list_name\">
+          <p class = \"list_name_text\">{{ name }}</p>
+          </div>
           {% for category in categories %}
               <div class=\"category_name_list\">
                   <div class=\"list_mark\">
-                  <img class = \"list_mark\" src=\"https://img.icons8.com/external-gradak-royyan-wijaya/24/000000/external-circle-gradak-music-gradak-royyan-wijaya.png\"/>
+                  <img class = \"list_mark\" src=\"https://img.icons8.com/material-rounded/24/000000/sort-right.png\"/>
                   </div>
               <li class = \"category_name\"> <a class = \"category_name\" href=\"#\">{{ category.name }}</a></li>
               </div>
@@ -254,17 +254,16 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
 
                 <div class=\"item\">
                     <a href=\"{{ path('show-one', {'id':item.id}) }}\">
-                        <div class=\"item_header\">
-                            <img class=\"item_hero\" src=\"{{ item.img }}\">
-                            {{ item.name }}
-                            <p>{{ item.price }}</p>
+                        <div class=\"item_image\">
+                            <img class = \"item_image_content\"src=\"{{ item.img }}\" alt=\"\">
                         </div>
+                        <div class=\"item_name\">
+                            <p class = \"item_name_text\">{{ item.name }}</p>
+
+                        </div>
+
                     </a>
-                    <div class=\"item_button\">
-                        <button>
-                            Kup teraz
-                        </button>
-                    </div>
+
                 </div>
 
             {% endfor %}

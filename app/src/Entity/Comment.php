@@ -14,9 +14,6 @@ class Comment
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $nickname;
-
-    #[ORM\Column(type: 'string', length: 255)]
     private $email;
 
     #[ORM\Column(type: 'text')]
@@ -25,21 +22,17 @@ class Comment
     #[ORM\Column(type: 'datetime')]
     private $duedate;
 
+    #[ORM\Column(type: 'integer')]
+    private $rating;
+
+    #[ORM\ManyToOne(targetEntity: Item::class, inversedBy: 'comments')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $item;
+
+
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getNickname(): ?string
-    {
-        return $this->nickname;
-    }
-
-    public function setNickname(string $nickname): self
-    {
-        $this->nickname = $nickname;
-
-        return $this;
     }
 
     public function getEmail(): ?string
@@ -77,4 +70,30 @@ class Comment
 
         return $this;
     }
+
+    public function getRating(): ?int
+    {
+        return $this->rating;
+    }
+
+    public function setRating(int $rating): self
+    {
+        $this->rating = $rating;
+
+        return $this;
+    }
+
+    public function getItem(): ?Item
+    {
+        return $this->item;
+    }
+
+    public function setItem(?Item $item): self
+    {
+        $this->item = $item;
+
+        return $this;
+    }
+
+
 }

@@ -93,7 +93,7 @@ class ItemFixtures extends Fixture
     $item1->setPrice(59.9);
     $item1->addCategory($build);
     $item1->setAge($age4);
-    $item1->setDescription('There are farm buildings and a tractor, plus a pig, sheep, horse, dog, hen, rooster and cows to care for.');
+    $item1->setDescription('There are farm buildings and a tractor, plus a pig, sheep, and cows to care for.');
     $item1->setImg('https://slimages.macysassets.com/is/image/MCY/products/0/optimized/19679220_fpx.tif');
 
     $manager->persist($item1);
@@ -117,7 +117,7 @@ class ItemFixtures extends Fixture
     $manager->persist($item3);
 
     $item4 = new Item();
-    $item4->setName('Funko Pop Movies it Chapter 2 Collectors Set 2 - Shop Ceeper, Pennywise with Partial Make Up, Pennywise In Pinstripe Suit');
+    $item4->setName('Funko Pop Movies it Chapter 2 Collectors Set 2');
     $item4->setPrice(28.99);
     $item4->addCategory($action);
     $item4->setAge($age5);
@@ -185,7 +185,7 @@ class ItemFixtures extends Fixture
     //steam
 
     $item11 = new Item();
-    $item11->setName('Banzai Wild Waves Water Park with Sprinkling Arch, Basketball hoop, and Ring Toss Game');
+    $item11->setName('Banzai Wild Waves Water Park with Sprinkling Arch and Ring Toss Game');
     $item11->setPrice(64.99);
     $item11->addCategory($outdoor);
     $item11->setAge($age2);
@@ -232,7 +232,7 @@ class ItemFixtures extends Fixture
     $item15->setPrice(17.99);
     $item15->addCategory($action);
     $item15->setAge($age5);
-    $item15->setDescription("With the Marvel Legends Series, fan favorite Marvel Comic Universe and Marvel Cinematic Universe characters are designed with premium detail and articulation for posing and display in collections. From figures to vehicles to premium roleplay items");
+    $item15->setDescription("With the Marvel Legends Series, fan favorite Marvel Comic Universe and Marvel Cinematic Universe characters are designed with premium detail and articulation for posing and display in collections. From figures to vehicles to premium roleplay items.");
     $item15->setImg('https://slimages.macysassets.com/is/image/MCY/products/2/optimized/20521472_fpx.tif');
     $manager->persist($item15);
     //action figures
@@ -257,7 +257,7 @@ class ItemFixtures extends Fixture
     $manager->persist($item17);
 
     $item18 = new Item();
-    $item18->setName('Mega Construx 199 Piece Pokemon Build and Show Squirtle Building Set');
+    $item18->setName('Mega Construx 199 Piece Pokemon Build  Building Set');
     $item18->setPrice(17.99);
     $item18->addCategory($build);
     $item18->setAge($age4);
@@ -277,7 +277,7 @@ class ItemFixtures extends Fixture
     //dolls
 
     $item20 = new Item();
-    $item20->setName('Wrebbit Harry Potter Daigon Alley Collection - Weasleys Wizard Wheezes Daily Prophet 3D Puzzle- 285 Pieces');
+    $item20->setName('Wrebbit Harry Potter Daigon Alley Collection 3D Puzzle');
     $item20->setPrice(31.95);
     $item20->addCategory($puzzles);
     $item20->setAge($age4);
@@ -319,11 +319,11 @@ class ItemFixtures extends Fixture
     //outdoor
 
     $item24 = new Item();
-    $item24->setName('Melissa and Doug Mickey Mouse Friends Soft & Cuddly Hand Puppets');
+    $item24->setName('Melissa and Doug Mickey Mouse Friends Hand Puppets');
     $item24->setPrice(16.99);
     $item24->addCategory($baby);
     $item24->setAge($age1);
-    $item24->setDescription("Have lots of hands-on fun with Mickey and the gang with these super-soft hand puppets Puppet play is a wonderful way to connect with children and for them to express themselves in a safe and imaginative way. Let Mickey, Minnie, Donald, and Goofy help children act out scenes, tell stories, practice new words, and talk about emotions. These approximately 10-inch hand puppets, sized to fit both children and adults, are a playful way to build vocabulary, dexterity, creativity, and imagination");
+    $item24->setDescription("Have lots of hands-on fun with Mickey and the gang with these super-soft hand puppets Puppet play is a wonderful way to connect with children and for them to express themselves in a safe and imaginative way.");
     $item24->setImg('https://slimages.macysassets.com/is/image/MCY/products/1/optimized/14325521_fpx.tif');
     $manager->persist($item24);
     //baby
@@ -333,7 +333,7 @@ class ItemFixtures extends Fixture
     $item25->setPrice(14.99);
     $item25->addCategory($steam);
     $item25->setAge($age4);
-    $item25->setDescription("A classic craft that includes new projects and updated patterns. Wood burning is the creative activity that is as popular now as it was a generation ago. T");
+    $item25->setDescription("A classic craft that includes new projects and updated patterns. Wood burning is the creative activity that is as popular now as it was a generation ago.");
     $item25->setImg('https://slimages.macysassets.com/is/image/MCY/products/8/optimized/17897958_fpx.tif');
     $manager->persist($item25);
     //steam

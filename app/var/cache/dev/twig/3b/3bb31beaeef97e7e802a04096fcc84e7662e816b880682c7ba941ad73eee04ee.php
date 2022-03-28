@@ -105,32 +105,33 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 15
-        echo "    <div class=\"container\">
+        echo "    <body>
+    <div class=\"container\">
         <div class=\"row\">
             <div class=\"item_image\">
                 <div class=\"image_content\">
                     <img class = \"image\" src=\"";
-        // line 19
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 19, $this->source); })()), "img", [], "any", false, false, false, 19), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 20, $this->source); })()), "img", [], "any", false, false, false, 20), "html", null, true);
         echo "\">
                 </div>
             </div>
             <div class=\"item_inf\">
                 <div class=\"item_name\">
                     <h1 class = \"item_name_text\">";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 24, $this->source); })()), "name", [], "any", false, false, false, 24), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 25, $this->source); })()), "name", [], "any", false, false, false, 25), "html", null, true);
         echo "</h1>
                 </div>
                 <div class=\"add_review\">
-                    <a  class = review_link href=\"#\">
+                    <a  class = review_link href=\"#comments\">
                     <div class=\"review_button\">
                     <p class=\"review_text\" >Add review</p>
                     </div>
                     </a>
                     <div class=\"stars\">
 ";
-        // line 34
+        // line 35
         echo "                        <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
                         <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
                         <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
@@ -140,8 +141,8 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 </div>
                 <div class=\"price\">
                     <p class = \"price_text\">";
-        // line 42
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 42, $this->source); })()), "price", [], "any", false, false, false, 42), "html", null, true);
+        // line 43
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 43, $this->source); })()), "price", [], "any", false, false, false, 43), "html", null, true);
         echo "\$</p>
                 </div>
                 <div class=\"buy_now\">
@@ -157,16 +158,82 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
             </div>
             <div class=\"details_description\">
                 <p class = \"details_description_text\">";
-        // line 56
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 56, $this->source); })()), "description", [], "any", false, false, false, 56), "html", null, true);
+        // line 57
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 57, $this->source); })()), "description", [], "any", false, false, false, 57), "html", null, true);
         echo "</p>
             </div>
         </div>
+
+            <div class=\"row\">
+                <div class=\"comment_form\">
+                    <div class=\"form_name\">
+                        <p id = \"comments\" class = \"form_name_text\">Add review</p>
+                    </div>
+                    <form  method=\"post\">
+                        <div class=\"comment_form_inner\">
+                        <div class=\"form_email\">
+                            <label for=\"email\">email</label>
+                            <input  class = \"email_input\" id = \"email\" type=\"text\" name=\"email\">
+                        </div>
+                        <div class=\"form_comment\">
+                            <label for=\"comment\">comment</label>
+                            <input  class = \"comment_input\" id = \"comment\" type=\"text\" name=\"comment\">
+                        </div>
+                        <div class=\"form_rating\">
+                            <label for=\"rating\">rating</label>
+                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">
+                        </div>
+                        <div class=\"form_button\">
+                        <button type=\"submit\">Post Review</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
         <div class=\"row\">
-
-
+            <div  class=\"comments\">
+                <div class=\"comments_name\">
+                    <p>Reviews</p>
+                </div>
+                ";
+        // line 94
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 94, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
+            // line 95
+            echo "                    <div class=\"comment\">
+                        <div class=\"comment_email\">
+                            ";
+            // line 97
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 97), "html", null, true);
+            echo "
+                        </div>
+                        <div class=\"comment_content\">
+                            ";
+            // line 100
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 100), "html", null, true);
+            echo "
+                        </div>
+                        <div class=\"rating_content\">
+                            ";
+            // line 103
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 103), "html", null, true);
+            echo "
+                        </div>
+                    </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 107
+        echo "            </div>
         </div>
     </div>
+    </body>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -188,7 +255,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  161 => 56,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  232 => 107,  222 => 103,  216 => 100,  210 => 97,  206 => 95,  202 => 94,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -207,6 +274,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 {% endblock %}
 
 {% block body %}
+    <body>
     <div class=\"container\">
         <div class=\"row\">
             <div class=\"item_image\">
@@ -219,7 +287,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     <h1 class = \"item_name_text\">{{ item.name }}</h1>
                 </div>
                 <div class=\"add_review\">
-                    <a  class = review_link href=\"#\">
+                    <a  class = review_link href=\"#comments\">
                     <div class=\"review_button\">
                     <p class=\"review_text\" >Add review</p>
                     </div>
@@ -251,11 +319,58 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 <p class = \"details_description_text\">{{ item.description }}</p>
             </div>
         </div>
+
+            <div class=\"row\">
+                <div class=\"comment_form\">
+                    <div class=\"form_name\">
+                        <p id = \"comments\" class = \"form_name_text\">Add review</p>
+                    </div>
+                    <form  method=\"post\">
+                        <div class=\"comment_form_inner\">
+                        <div class=\"form_email\">
+                            <label for=\"email\">email</label>
+                            <input  class = \"email_input\" id = \"email\" type=\"text\" name=\"email\">
+                        </div>
+                        <div class=\"form_comment\">
+                            <label for=\"comment\">comment</label>
+                            <input  class = \"comment_input\" id = \"comment\" type=\"text\" name=\"comment\">
+                        </div>
+                        <div class=\"form_rating\">
+                            <label for=\"rating\">rating</label>
+                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">
+                        </div>
+                        <div class=\"form_button\">
+                        <button type=\"submit\">Post Review</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
         <div class=\"row\">
-
-
+            <div  class=\"comments\">
+                <div class=\"comments_name\">
+                    <p>Reviews</p>
+                </div>
+                {% for comment in comments %}
+                    <div class=\"comment\">
+                        <div class=\"comment_email\">
+                            {{ comment.email }}
+                        </div>
+                        <div class=\"comment_content\">
+                            {{ comment.comment }}
+                        </div>
+                        <div class=\"rating_content\">
+                            {{ comment.rating }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
+    </body>
+
 {% endblock %}
 
 ", "Items/show.html.twig", "/var/www/symfony_docker/templates/Items/show.html.twig");

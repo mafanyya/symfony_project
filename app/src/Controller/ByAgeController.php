@@ -29,8 +29,9 @@ class ByAgeController extends AbstractController
   {
     return $this->render('Items/items.html.twig', [
       'name' => 'By age',
+      'category_name' => 'By age',
       'items' => $this->itemRepository->findAll(),
-      'categories' => $this->categoryRepository->findAll(),
+      'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
@@ -42,8 +43,10 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '0-24 months',
+        'name' => 'By age',
+      'category_name' => '0-24 months',
         'items' => $this->itemRepository->findItemsByAge('0-2 years'),
+        'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
@@ -55,8 +58,10 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '3-4 years',
+        'name' => 'By age',
+        'category_name' => '3-4 years',
         'items' => $this->itemRepository->findItemsByAge('3-4 years'),
+        'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
@@ -68,8 +73,10 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name' => '5-7 years',
+        'name' => 'By age',
+        'category_name' => '5-7 years',
         'items' => $this->itemRepository->findItemsByAge('5-7 years'),
+        'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
@@ -81,8 +88,10 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name'=>'8-10 years',
+        'name' => 'By age',
+        'category_name'=>'8-10 years',
         'items' => $this->itemRepository->findItemsByAge('8-10 years'),
+        'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
@@ -94,8 +103,10 @@ class ByAgeController extends AbstractController
   {
 
     return $this->render('Items/items.html.twig', [
-      'name'=>'11+ years',
+        'name' => 'By age',
+        'category_name'=>'11+ years',
         'items' => $this->itemRepository->findItemsByAge('11+ years'),
+        'categories' => $this->ageRepository->findAll(),
     ]);
   }
 

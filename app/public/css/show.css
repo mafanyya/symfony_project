@@ -120,3 +120,31 @@
 ;
 
 }
+label{
+    display: block;
+}
+
+.comment_form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding-left:20px;
+}
+.form_name_text{
+    font-size:30px;
+    font-weight:600;
+    margin-bottom: 20px;
+
+}
+.comment_input,
+.rating_input,
+.email_input{
+    border: 2px solid #D1D1D1;
+    border-radius:5px;
+}
+
+
+.comment_input{
+    height: 50px;
+}
+

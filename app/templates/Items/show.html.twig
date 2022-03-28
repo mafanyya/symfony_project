@@ -12,6 +12,7 @@
 {% endblock %}
 
 {% block body %}
+    <body>
     <div class="container">
         <div class="row">
             <div class="item_image">
@@ -24,7 +25,7 @@
                     <h1 class = "item_name_text">{{ item.name }}</h1>
                 </div>
                 <div class="add_review">
-                    <a  class = review_link href="#">
+                    <a  class = review_link href="#comments">
                     <div class="review_button">
                     <p class="review_text" >Add review</p>
                     </div>
@@ -56,10 +57,58 @@
                 <p class = "details_description_text">{{ item.description }}</p>
             </div>
         </div>
+
+            <div class="row">
+                <div class="comment_form">
+                    <div class="form_name">
+                        <p id = "comments" class = "form_name_text">Add review</p>
+                    </div>
+                    <form  method="post">
+                        <div class="comment_form_inner">
+                        <div class="form_email">
+                            <label for="email">email</label>
+                            <input  class = "email_input" id = "email" type="text" name="email">
+                        </div>
+                        <div class="form_comment">
+                            <label for="comment">comment</label>
+                            <input  class = "comment_input" id = "comment" type="text" name="comment">
+                        </div>
+                        <div class="form_rating">
+                            <label for="rating">rating</label>
+
+                            <input  class = "rating_input" id = "rating" type="int" name="rating">
+                        </div>
+                        <div class="form_button">
+                        <button type="submit">Post Review</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
         <div class="row">
-
-
+            <div  class="comments">
+                <div class="comments_name">
+                    <p>Reviews</p>
+                </div>
+                {% for comment in comments %}
+                    <div class="comment">
+                        <div class="comment_email">
+                            {{ comment.email }}
+                        </div>
+                        <div class="comment_content">
+                            {{ comment.comment }}
+                        </div>
+                        <div class="rating_content">
+                            {{ comment.rating }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
+    </body>
+
 {% endblock %}
 
