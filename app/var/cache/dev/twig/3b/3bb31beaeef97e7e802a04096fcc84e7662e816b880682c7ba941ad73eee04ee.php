@@ -180,15 +180,22 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             <input  class = \"comment_input\" id = \"comment\" type=\"text\" name=\"comment\">
                         </div>
                         <div class=\"form_rating\">
-                            <label for=\"rating\">rating</label>
-                            <botton id = \"rating1\" value = 1>1</botton>
-                            <botton id = \"rating3\" value = 1>2</botton>
-                            <botton id = \"rating4\" value = 1>3</botton>
-                            <botton id = \"rating5\" value = 1>4</botton>
-                            <botton id = \"rating6\" value = 1>5</botton>
+                            <input type=\"radio\" id = \"1\" name = \"rating\" value = \"1\">
+                            <label for=\"1\">1</label>
+                            <input type=\"radio\" id = \"2\" name = \"rating\" value = \"2\">
+                            <label for=\"1\">2</label>
+                            <input type=\"radio\" id = \"3\" name = \"rating\" value = \"3\">
+                            <label for=\"1\">3</label>
+                            <input type=\"radio\" id = \"4\" name = \"rating\" value = \"4\">
+                            <label for=\"1\">4</label>
+                            <input type=\"radio\" id = \"5\" name = \"rating\" value = \"5\">
+                            <label for=\"1\">5</label>
 
 ";
-        // line 85
+        // line 93
+        echo "
+";
+        // line 95
         echo "                        </div>
                         <div class=\"form_button\">
                         <button type=\"submit\">Post Review</button>
@@ -205,29 +212,32 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     <p>Reviews</p>
                 </div>
                 ";
-        // line 100
+        // line 110
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 100, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 110, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 101
+            // line 111
             echo "                    <div class=\"comment\">
                         <div class=\"comment_email\">
                             ";
-            // line 103
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 103), "html", null, true);
+            // line 113
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 113), "html", null, true);
             echo "
                         </div>
                         <div class=\"comment_content\">
                             ";
-            // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 106), "html", null, true);
+            // line 116
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 116), "html", null, true);
             echo "
                         </div>
                         <div class=\"rating_content\">
-                            ";
-            // line 109
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 109), "html", null, true);
+                            <p>
+                                rating: ";
+            // line 120
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 120), "html", null, true);
             echo "
+                            </p>
+
                         </div>
                     </div>
                 ";
@@ -235,7 +245,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 113
+        // line 126
         echo "            </div>
         </div>
     </div>
@@ -262,7 +272,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  239 => 113,  229 => 109,  223 => 106,  217 => 103,  213 => 101,  209 => 100,  192 => 85,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  249 => 126,  237 => 120,  230 => 116,  224 => 113,  220 => 111,  216 => 110,  199 => 95,  196 => 93,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -343,12 +353,22 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             <input  class = \"comment_input\" id = \"comment\" type=\"text\" name=\"comment\">
                         </div>
                         <div class=\"form_rating\">
-                            <label for=\"rating\">rating</label>
-                            <botton id = \"rating1\" value = 1>1</botton>
-                            <botton id = \"rating3\" value = 1>2</botton>
-                            <botton id = \"rating4\" value = 1>3</botton>
-                            <botton id = \"rating5\" value = 1>4</botton>
-                            <botton id = \"rating6\" value = 1>5</botton>
+                            <input type=\"radio\" id = \"1\" name = \"rating\" value = \"1\">
+                            <label for=\"1\">1</label>
+                            <input type=\"radio\" id = \"2\" name = \"rating\" value = \"2\">
+                            <label for=\"1\">2</label>
+                            <input type=\"radio\" id = \"3\" name = \"rating\" value = \"3\">
+                            <label for=\"1\">3</label>
+                            <input type=\"radio\" id = \"4\" name = \"rating\" value = \"4\">
+                            <label for=\"1\">4</label>
+                            <input type=\"radio\" id = \"5\" name = \"rating\" value = \"5\">
+                            <label for=\"1\">5</label>
+
+{#                            <button type = button name = \"rating\" id = \"rating1\" value = \"1\" >1</button>#}
+{#                            <button type = button name = \"rating\" id = \"rating3\" value = \"2\" >2</button>#}
+{#                            <button type = button name = \"rating\" id = \"rating4\" value = \"3\" >3</button>#}
+{#                            <button type = button name = \"rating\" id = \"rating5\" value = \"4\" >4</button>#}
+{#                            <button type = button name = \"rating\" id = \"rating6\" value = \"5\" >5</button>#}
 
 {#                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">#}
                         </div>
@@ -375,7 +395,10 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             {{ comment.comment }}
                         </div>
                         <div class=\"rating_content\">
-                            {{ comment.rating }}
+                            <p>
+                                rating: {{ comment.rating }}
+                            </p>
+
                         </div>
                     </div>
                 {% endfor %}

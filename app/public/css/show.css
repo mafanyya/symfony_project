@@ -143,8 +143,31 @@ label{
     border-radius:5px;
 }
 
-
 .comment_input{
-    height: 50px;
+    width:30%;
+    height: 80px;
+}
+
+.form_rating{
+    display: flex;
+    margin-top:20px;
+}
+.comments_name{
+    font-size: 30px;
+    font-weight: 600;
+}
+.comments{
+    padding-left: 20px;
+}
+.comment_email{
+    font-size:15px;
+    color:#636E72;
+}
+.comment_content{
+    font-size:18px;
+}
+.rating_content{
+    font-size:15px;
+    color:#636E72;
 }
 

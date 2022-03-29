@@ -151,7 +151,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
             // line 39
             echo "
                 <div class=\"item\">
-                    <a href=\"";
+                    <a class = \"item_content\" href=\"";
             // line 41
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show-one", ["id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\">
@@ -166,11 +166,8 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
             // line 46
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 46), "html", null, true);
             echo "</p>
-
                         </div>
-
                     </a>
-
                 </div>
 
             ";
@@ -178,12 +175,10 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 52
         echo "
         </div>
       </div>
-
-
     </div>
   </div>
   </body>
@@ -208,7 +203,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
 
     public function getDebugInfo()
     {
-        return array (  182 => 55,  167 => 46,  161 => 43,  156 => 41,  152 => 39,  148 => 38,  142 => 34,  133 => 31,  127 => 27,  123 => 26,  118 => 24,  108 => 17,  102 => 13,  92 => 12,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  179 => 52,  167 => 46,  161 => 43,  156 => 41,  152 => 39,  148 => 38,  142 => 34,  133 => 31,  127 => 27,  123 => 26,  118 => 24,  108 => 17,  102 => 13,  92 => 12,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -253,25 +248,20 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
             {% for item in items %}
 
                 <div class=\"item\">
-                    <a href=\"{{ path('show-one', {'id':item.id}) }}\">
+                    <a class = \"item_content\" href=\"{{ path('show-one', {'id':item.id}) }}\">
                         <div class=\"item_image\">
                             <img class = \"item_image_content\"src=\"{{ item.img }}\" alt=\"\">
                         </div>
                         <div class=\"item_name\">
                             <p class = \"item_name_text\">{{ item.name }}</p>
-
                         </div>
-
                     </a>
-
                 </div>
 
             {% endfor %}
 
         </div>
       </div>
-
-
     </div>
   </div>
   </body>

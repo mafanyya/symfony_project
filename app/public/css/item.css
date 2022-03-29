@@ -106,3 +106,8 @@
    width: 100%;
     height: auto;
 }
+.item_content{
+    text-decoration: none;
+    color:#636E72;
+    font-weight: 400;
+}

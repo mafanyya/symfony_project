@@ -74,12 +74,22 @@
                             <input  class = "comment_input" id = "comment" type="text" name="comment">
                         </div>
                         <div class="form_rating">
-                            <label for="rating">rating</label>
-                            <button id = "rating1" value = 1>1</button>
-                            <button id = "rating3" value = 1>2</button>
-                            <button id = "rating4" value = 1>3</button>
-                            <button id = "rating5" value = 1>4</button>
-                            <button id = "rating6" value = 1>5</button>
+                            <input type="radio" id = "1" name = "rating" value = "1">
+                            <label for="1">1</label>
+                            <input type="radio" id = "2" name = "rating" value = "2">
+                            <label for="1">2</label>
+                            <input type="radio" id = "3" name = "rating" value = "3">
+                            <label for="1">3</label>
+                            <input type="radio" id = "4" name = "rating" value = "4">
+                            <label for="1">4</label>
+                            <input type="radio" id = "5" name = "rating" value = "5">
+                            <label for="1">5</label>
+
+{#                            <button type = button name = "rating" id = "rating1" value = "1" >1</button>#}
+{#                            <button type = button name = "rating" id = "rating3" value = "2" >2</button>#}
+{#                            <button type = button name = "rating" id = "rating4" value = "3" >3</button>#}
+{#                            <button type = button name = "rating" id = "rating5" value = "4" >4</button>#}
+{#                            <button type = button name = "rating" id = "rating6" value = "5" >5</button>#}
 
 {#                            <input  class = "rating_input" id = "rating" type="int" name="rating">#}
                         </div>
@@ -106,7 +116,10 @@
                             {{ comment.comment }}
                         </div>
                         <div class="rating_content">
-                            {{ comment.rating }}
+                            <p>
+                                rating: {{ comment.rating }}
+                            </p>
+
                         </div>
                     </div>
                 {% endfor %}
