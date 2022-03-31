@@ -20,6 +20,17 @@ class ContactController extends AbstractController
        'name' => 'Homepage'
     ]);
   }
+    /**
+     * @Route ("/cart", name="cart")
+     * @return Response
+     */
+    public function cart():Response
+    {
+        return $this->render('Items/cart.html.twig',[
+            'name' => 'My cart'
+        ]);
+
+    }
 
   /**
    * @Route ("/contact", name="contact")

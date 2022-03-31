@@ -33,6 +33,7 @@ return [
         '/by-category/steam-toys' => [[['_route' => 'by-category11', '_controller' => 'App\\Controller\\ByCategoryController::steamToys'], null, null, null, false, false, null]],
         '/by-category/remote-control-toys' => [[['_route' => 'by-category12', '_controller' => 'App\\Controller\\ByCategoryController::remoteControlToys'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'root', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
+        '/cart' => [[['_route' => 'cart', '_controller' => 'App\\Controller\\ContactController::cart'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::hotDeals'], null, null, null, false, false, null]],
         '/hot-deals' => [[['_route' => 'hot-deals', '_controller' => 'App\\Controller\\HotDealsController::hotDeals'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],

@@ -1,7 +1,15 @@
 {% extends 'index.html.twig' %}
 
 
-{% block title %}Registration{% endblock %}
+{% block header %}
+    {{ parent() }}
+    <link href="{{ asset('css/root.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/reg_log.css') }}" rel="stylesheet"/>
+    <head>
+        <title>Registration</title>
+    </head>
+
+{% endblock %}
 
 {% block body %}
 
@@ -10,15 +18,25 @@
             {% for flash_error in app.flashes('verify_email_error') %}
                 <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
             {% endfor %}
-
-            <h1>Registration</h1>
+            <div class="reg_name">
+                <h1 class = "title">Registration</h1>
+            </div>
+            <div class="form_content">
 
             {{ form_start(registrationForm) }}
-            {{ form_row(registrationForm.email) }}
+                <div class="form_email">
+                    {{ form_row(registrationForm.email) }}
+                </div>
+
+                <div class="form_pass">
+
             {{ form_row(registrationForm.plainPassword, {
                 label: 'Password'
             }) }}
+                </div>
+
             {{ form_row(registrationForm.agreeTerms) }}
+            </div>
 
             <button type="submit" class="btn">Register</button>
             {{ form_end(registrationForm) }}

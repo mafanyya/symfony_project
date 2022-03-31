@@ -114,7 +114,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/var/www/symfony_docker/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/var/www/symfony_docker/var/sessions/dev</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -1954,7 +1954,7 @@
     </service>
     <service id="session.storage.factory.native" class="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorageFactory">
       <argument>%session.storage.options%</argument>
-      <argument>null</argument>
+      <argument type="service" id="session.handler.native_file"/>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
           <argument>_sf2_meta</argument>
@@ -1964,7 +1964,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.php_bridge" class="Symfony\Component\HttpFoundation\Session\Storage\PhpBridgeSessionStorageFactory">
-      <argument>null</argument>
+      <argument type="service" id="session.handler.native_file"/>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
           <argument>_sf2_meta</argument>
@@ -1986,7 +1986,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>/var/www/symfony_docker/var/cache/dev/sessions</argument>
+          <argument>/var/www/symfony_docker/var/sessions/dev</argument>
         </service>
       </argument>
     </service>

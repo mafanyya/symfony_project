@@ -84,7 +84,6 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         echo "</title>
     </head>
 
-
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -94,7 +93,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     }
 
-    // line 14
+    // line 13
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -104,23 +103,23 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 15
+        // line 14
         echo "    <body>
     <div class=\"container\">
         <div class=\"row\">
             <div class=\"item_image\">
                 <div class=\"image_content\">
                     <img class = \"image\" src=\"";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 20, $this->source); })()), "img", [], "any", false, false, false, 20), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 19, $this->source); })()), "img", [], "any", false, false, false, 19), "html", null, true);
         echo "\">
                 </div>
             </div>
             <div class=\"item_inf\">
                 <div class=\"item_name\">
                     <h1 class = \"item_name_text\">";
-        // line 25
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 25, $this->source); })()), "name", [], "any", false, false, false, 25), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 24, $this->source); })()), "name", [], "any", false, false, false, 24), "html", null, true);
         echo "</h1>
                 </div>
                 <div class=\"add_review\">
@@ -131,7 +130,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     </a>
                     <div class=\"stars\">
 ";
-        // line 35
+        // line 34
         echo "                        <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
                         <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
                         <img class = \"star\" src=\"https://img.icons8.com/fluency-systems-regular/48/000000/rating.png\"/>
@@ -141,8 +140,8 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 </div>
                 <div class=\"price\">
                     <p class = \"price_text\">";
-        // line 43
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 43, $this->source); })()), "price", [], "any", false, false, false, 43), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 42, $this->source); })()), "price", [], "any", false, false, false, 42), "html", null, true);
         echo "\$</p>
                 </div>
                 <div class=\"buy_now\">
@@ -158,8 +157,8 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
             </div>
             <div class=\"details_description\">
                 <p class = \"details_description_text\">";
-        // line 57
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 57, $this->source); })()), "description", [], "any", false, false, false, 57), "html", null, true);
+        // line 56
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 56, $this->source); })()), "description", [], "any", false, false, false, 56), "html", null, true);
         echo "</p>
             </div>
         </div>
@@ -192,15 +191,34 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             <label for=\"1\">5</label>
 
 ";
-        // line 93
+        // line 92
         echo "
 ";
-        // line 95
+        // line 94
         echo "                        </div>
                         <div class=\"form_button\">
                         <button type=\"submit\">Post Review</button>
                         </div>
-                        </div>
+
+                            ";
+        // line 99
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 99, $this->source); })()), "flashes", [0 => "notice"], "method", false, false, false, 99));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 100
+            echo "                                <div class=\"flash-notice\">
+                                    ";
+            // line 101
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+                                </div>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 104
+        echo "                        </div>
                     </form>
                 </div>
             </div>
@@ -212,29 +230,29 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     <p>Reviews</p>
                 </div>
                 ";
-        // line 110
+        // line 115
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 110, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 115, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 111
+            // line 116
             echo "                    <div class=\"comment\">
                         <div class=\"comment_email\">
                             ";
-            // line 113
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 113), "html", null, true);
+            // line 118
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 118), "html", null, true);
             echo "
                         </div>
                         <div class=\"comment_content\">
                             ";
-            // line 116
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 116), "html", null, true);
+            // line 121
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 121), "html", null, true);
             echo "
                         </div>
                         <div class=\"rating_content\">
                             <p>
                                 rating: ";
-            // line 120
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 120), "html", null, true);
+            // line 125
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 125), "html", null, true);
             echo "
                             </p>
 
@@ -245,7 +263,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 126
+        // line 131
         echo "            </div>
         </div>
     </div>
@@ -272,7 +290,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  249 => 126,  237 => 120,  230 => 116,  224 => 113,  220 => 111,  216 => 110,  199 => 95,  196 => 93,  162 => 57,  145 => 43,  135 => 35,  123 => 25,  115 => 20,  108 => 15,  98 => 14,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  267 => 131,  255 => 125,  248 => 121,  242 => 118,  238 => 116,  234 => 115,  221 => 104,  212 => 101,  209 => 100,  205 => 99,  198 => 94,  195 => 92,  161 => 56,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  107 => 14,  97 => 13,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -286,7 +304,6 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
     <head>
         <title>Buy {{ item.name }}</title>
     </head>
-
 
 {% endblock %}
 
@@ -375,6 +392,12 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                         <div class=\"form_button\">
                         <button type=\"submit\">Post Review</button>
                         </div>
+
+                            {% for message in app.flashes('notice') %}
+                                <div class=\"flash-notice\">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
                         </div>
                     </form>
                 </div>

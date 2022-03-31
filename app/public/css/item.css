@@ -76,7 +76,7 @@
     width: 77.33%;
     height: auto;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: start;
 }
 .item {
     display: flex;
@@ -86,6 +86,8 @@
     font-size: 16px;
     cursor: pointer;
     overflow: hidden;
+    border: 2px solid #D1D1D1;
+
 }
 
 

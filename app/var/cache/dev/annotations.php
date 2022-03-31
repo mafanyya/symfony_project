@@ -74,16 +74,18 @@ return [[
 '[C]App%5CController%5CByAgeController%24ageRepository' => 1,
 'App%5CController%5CByAgeController%24itemRepository' => 0,
 '[C]App%5CController%5CByAgeController%24itemRepository' => 1,
+'App%5CController%5CByAgeController%24categoryRepository' => 0,
+'[C]App%5CController%5CByAgeController%24categoryRepository' => 1,
 'App%5CController%5CByCategoryController' => 0,
 '[C]App%5CController%5CByCategoryController' => 1,
 'App%5CController%5CByCategoryController%23__construct' => 0,
 '[C]App%5CController%5CByCategoryController%23__construct' => 1,
-'App%5CController%5CByCategoryController%23byCategory' => 8,
-'[C]App%5CController%5CByCategoryController%23byCategory' => 1,
 'App%5CController%5CByCategoryController%23show' => 0,
 '[C]App%5CController%5CByCategoryController%23show' => 1,
 'App%5CController%5CByCategoryController%23showw' => 0,
 '[C]App%5CController%5CByCategoryController%23showw' => 1,
+'App%5CController%5CByCategoryController%23byCategory' => 8,
+'[C]App%5CController%5CByCategoryController%23byCategory' => 1,
 'App%5CController%5CByCategoryController%23actionFigures' => 9,
 '[C]App%5CController%5CByCategoryController%23actionFigures' => 1,
 'App%5CController%5CByCategoryController%23babyAndPreschoolToys' => 10,
@@ -112,19 +114,21 @@ return [[
 '[C]App%5CController%5CByCategoryController%24categoryRepository' => 1,
 'App%5CController%5CByCategoryController%24itemRepository' => 0,
 '[C]App%5CController%5CByCategoryController%24itemRepository' => 1,
+'App%5CController%5CByCategoryController%24commentRepository' => 0,
+'[C]App%5CController%5CByCategoryController%24commentRepository' => 1,
 'App%5CController%5CCommentController' => 0,
 '[C]App%5CController%5CCommentController' => 1,
-'App%5CController%5CCommentController%23new' => 0,
-'[C]App%5CController%5CCommentController%23new' => 1,
 'App%5CController%5CContactController' => 0,
 '[C]App%5CController%5CContactController' => 1,
 'App%5CController%5CContactController%23index' => 21,
 '[C]App%5CController%5CContactController%23index' => 1,
-'App%5CController%5CContactController%23hotDeals' => 22,
+'App%5CController%5CContactController%23cart' => 22,
+'[C]App%5CController%5CContactController%23cart' => 1,
+'App%5CController%5CContactController%23hotDeals' => 23,
 '[C]App%5CController%5CContactController%23hotDeals' => 1,
 'App%5CController%5CHotDealsController' => 0,
 '[C]App%5CController%5CHotDealsController' => 1,
-'App%5CController%5CHotDealsController%23hotDeals' => 23,
+'App%5CController%5CHotDealsController%23hotDeals' => 24,
 '[C]App%5CController%5CHotDealsController%23hotDeals' => 1,
 'App%5CController%5CLoginController' => 0,
 '[C]App%5CController%5CLoginController' => 1,
@@ -188,10 +192,6 @@ return [[
 '[C]App%5CEntity%5CComment' => 1,
 'App%5CEntity%5CComment%23getId' => 0,
 '[C]App%5CEntity%5CComment%23getId' => 1,
-'App%5CEntity%5CComment%23getNickname' => 0,
-'[C]App%5CEntity%5CComment%23getNickname' => 1,
-'App%5CEntity%5CComment%23setNickname' => 0,
-'[C]App%5CEntity%5CComment%23setNickname' => 1,
 'App%5CEntity%5CComment%23getEmail' => 0,
 '[C]App%5CEntity%5CComment%23getEmail' => 1,
 'App%5CEntity%5CComment%23setEmail' => 0,
@@ -204,16 +204,26 @@ return [[
 '[C]App%5CEntity%5CComment%23getDuedate' => 1,
 'App%5CEntity%5CComment%23setDuedate' => 0,
 '[C]App%5CEntity%5CComment%23setDuedate' => 1,
+'App%5CEntity%5CComment%23getRating' => 0,
+'[C]App%5CEntity%5CComment%23getRating' => 1,
+'App%5CEntity%5CComment%23setRating' => 0,
+'[C]App%5CEntity%5CComment%23setRating' => 1,
+'App%5CEntity%5CComment%23getItem' => 0,
+'[C]App%5CEntity%5CComment%23getItem' => 1,
+'App%5CEntity%5CComment%23setItem' => 0,
+'[C]App%5CEntity%5CComment%23setItem' => 1,
 'App%5CEntity%5CComment%24id' => 0,
 '[C]App%5CEntity%5CComment%24id' => 1,
-'App%5CEntity%5CComment%24nickname' => 0,
-'[C]App%5CEntity%5CComment%24nickname' => 1,
 'App%5CEntity%5CComment%24email' => 0,
 '[C]App%5CEntity%5CComment%24email' => 1,
 'App%5CEntity%5CComment%24comment' => 0,
 '[C]App%5CEntity%5CComment%24comment' => 1,
 'App%5CEntity%5CComment%24duedate' => 0,
 '[C]App%5CEntity%5CComment%24duedate' => 1,
+'App%5CEntity%5CComment%24rating' => 0,
+'[C]App%5CEntity%5CComment%24rating' => 1,
+'App%5CEntity%5CComment%24item' => 0,
+'[C]App%5CEntity%5CComment%24item' => 1,
 'App%5CEntity%5CItem' => 0,
 '[C]App%5CEntity%5CItem' => 1,
 'App%5CEntity%5CItem%23__construct' => 0,
@@ -246,6 +256,12 @@ return [[
 '[C]App%5CEntity%5CItem%23getAge' => 1,
 'App%5CEntity%5CItem%23setAge' => 0,
 '[C]App%5CEntity%5CItem%23setAge' => 1,
+'App%5CEntity%5CItem%23getComments' => 0,
+'[C]App%5CEntity%5CItem%23getComments' => 1,
+'App%5CEntity%5CItem%23addComment' => 0,
+'[C]App%5CEntity%5CItem%23addComment' => 1,
+'App%5CEntity%5CItem%23removeComment' => 0,
+'[C]App%5CEntity%5CItem%23removeComment' => 1,
 'App%5CEntity%5CItem%24id' => 0,
 '[C]App%5CEntity%5CItem%24id' => 1,
 'App%5CEntity%5CItem%24name' => 0,
@@ -260,6 +276,8 @@ return [[
 '[C]App%5CEntity%5CItem%24categories' => 1,
 'App%5CEntity%5CItem%24age' => 0,
 '[C]App%5CEntity%5CItem%24age' => 1,
+'App%5CEntity%5CItem%24comments' => 0,
+'[C]App%5CEntity%5CItem%24comments' => 1,
 'App%5CEntity%5CUser' => 0,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
@@ -842,7 +860,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1648344100,
+1 => 1648741469,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1832,6 +1850,55 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
+                    '/cart',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'cart',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+23 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
                     '/contact',
                 ],
                 'methods' => [
@@ -1872,7 +1939,7 @@ return [[
         []
     );
 },
-23 => static function () {
+24 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),

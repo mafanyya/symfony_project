@@ -27,29 +27,6 @@ class ByCategoryController extends AbstractController
     $this->commentRepository = $commentRepository;
   }
 
-
-
-
-  /**
-   * @Route ("/by-category", name="by-category")
-   * @return Response
-   */
-  public function byCategory(): Response
-  {
-
-      // info about current logged user
-      $currentUser = $this->getUser();
-
-
-    return $this->render('Items/items.html.twig', [
-      'items' => $this->itemRepository->findAll(),
-      'name' => 'By category',
-      'category_name' => 'By category',
-      'categories' => $this->categoryRepository->findAll(),
-
-    ]);
-  }
-
     #[Route('/show/{id}', name: 'show-one')]
     public function show($id, Request $request, ManagerRegistry $doctrine): Response
     {
@@ -72,13 +49,16 @@ class ByCategoryController extends AbstractController
             $entityManager->persist($newComment);
             $entityManager->flush();
 
+            $this->addFlash(
+                'notice',
+                'Success!'
+
+            );
+            return $this->redirectToRoute('show-one',
+            ['id' => $id]);
+
             // return anything you want
-            return $this->render('Items/show.html.twig', [
-                'item' => $item,
-                'name' => 'Buy toy',
-                'categories' => $this->categoryRepository->findAll(),
-                'comments' => $this->commentRepository->findCommentsByItem($item),
-            ]);
+
         }
 
         $item = $this->itemRepository->find($id);
@@ -97,6 +77,25 @@ class ByCategoryController extends AbstractController
         return $this->render('Items/show.html.twig', [
             'item' => $item,
             'categories' => $this->categoryRepository->findAll(),
+        ]);
+    }
+    /**
+     * @Route ("/by-category", name="by-category")
+     * @return Response
+     */
+    public function byCategory(): Response
+    {
+
+        // info about current logged user
+        $currentUser = $this->getUser();
+
+
+        return $this->render('Items/items.html.twig', [
+            'items' => $this->itemRepository->findAll(),
+            'name' => 'By category',
+            'category_name' => 'By category',
+            'categories' => $this->categoryRepository->findAll(),
+
         ]);
     }
 
