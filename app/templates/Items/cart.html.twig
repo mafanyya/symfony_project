@@ -2,6 +2,7 @@
 
 {% block header %}
     <link href="{{ asset('css/root.css') }}" rel="stylesheet"/>
+{#    <link href="{{ asset('css/item.css') }}" rel="stylesheet"/>#}
     <link href="{{ asset('css/cart.css') }}" rel="stylesheet"/>
     {{ parent() }}
 
@@ -10,7 +11,59 @@
 {% block body %}
     <body>
     <div class="container">
-        <p>my cart</p>
+        <div class="items_wrapper">
+            <div class="content_items">
+
+                    {% if items  %}
+                        {% for item in items %}
+                            <div class="item">
+                                <a class = "item_content" href="{{ path('show-one', {'id':item.id}) }}">
+                                    <div class="item_image">
+                                        <img class = "item_image_content"src="{{ item.img }}" alt="">
+                                    </div>
+
+                                    <div class="item_information">
+                                    <div class="item_name">
+                                        <p class = "item_name_text">{{ item.name }}</p>
+                                    </div>
+                                        <form  class = "remove_button" method="post" >
+                                            <input type = "hidden" name = "item_id" value = "{{ item.id }}">
+                                            <button onclick = "removeItem()" type = "submit" name = "action" value="remove_from_cart">Remove</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="item_price">
+                                        <p class = "item_price_text">{{ item.price }}$</p>
+                                    </div>
+
+
+
+
+                                </a>
+
+                            </div>
+                        {% endfor %}
+
+                        <span class="total">
+                                        <p>Total: {{ total }}$</p>
+                                    </span>
+                    {% else %}
+                        <p>No items in cart</p>
+                    {% endif %}
+
+            </div>
+        </div>
+
+
     </div>
+    <script>
+        function removeItem()
+        {
+            alert('Removed from list');
+        }
+    </script>
     </body>
 {% endblock %}
+
+
+

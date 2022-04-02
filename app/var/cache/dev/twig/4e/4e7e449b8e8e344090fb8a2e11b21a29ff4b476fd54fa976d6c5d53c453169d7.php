@@ -69,12 +69,13 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
         echo "    <link href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/root.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
-    <link href=\"";
-        // line 5
+";
+        // line 6
+        echo "    <link href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/cart.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
     ";
-        // line 6
+        // line 7
         $this->displayParentBlock("header", $context, $blocks);
         echo "
 
@@ -87,7 +88,7 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
 
     }
 
-    // line 10
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -97,11 +98,94 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 11
+        // line 12
         echo "    <body>
     <div class=\"container\">
-        <p>my cart</p>
+        <div class=\"items_wrapper\">
+            <div class=\"content_items\">
+
+                    ";
+        // line 17
+        if ((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 17, $this->source); })())) {
+            // line 18
+            echo "                        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 18, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+                // line 19
+                echo "                            <div class=\"item\">
+                                <a class = \"item_content\" href=\"";
+                // line 20
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show-one", ["id" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 20)]), "html", null, true);
+                echo "\">
+                                    <div class=\"item_image\">
+                                        <img class = \"item_image_content\"src=\"";
+                // line 22
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "img", [], "any", false, false, false, 22), "html", null, true);
+                echo "\" alt=\"\">
+                                    </div>
+
+                                    <div class=\"item_information\">
+                                    <div class=\"item_name\">
+                                        <p class = \"item_name_text\">";
+                // line 27
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "name", [], "any", false, false, false, 27), "html", null, true);
+                echo "</p>
+                                    </div>
+                                        <form  class = \"remove_button\" method=\"post\" >
+                                            <input type = \"hidden\" name = \"item_id\" value = \"";
+                // line 30
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 30), "html", null, true);
+                echo "\">
+                                            <button onclick = \"removeItem()\" type = \"submit\" name = \"action\" value=\"remove_from_cart\">Remove</button>
+                                        </form>
+                                    </div>
+
+                                    <div class=\"item_price\">
+                                        <p class = \"item_price_text\">";
+                // line 36
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 36), "html", null, true);
+                echo "\$</p>
+                                    </div>
+
+
+
+
+                                </a>
+
+                            </div>
+                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 46
+            echo "
+                        <span class=\"total\">
+                                        <p>Total: ";
+            // line 48
+            echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 48, $this->source); })()), "html", null, true);
+            echo "\$</p>
+                                    </span>
+                    ";
+        } else {
+            // line 51
+            echo "                        <p>No items in cart</p>
+                    ";
+        }
+        // line 53
+        echo "
+            </div>
+        </div>
+
+
     </div>
+    <script>
+        function removeItem()
+        {
+            alert('Removed from list');
+        }
+    </script>
     </body>
 ";
         
@@ -124,7 +208,7 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
 
     public function getDebugInfo()
     {
-        return array (  101 => 11,  91 => 10,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  177 => 53,  173 => 51,  167 => 48,  163 => 46,  147 => 36,  138 => 30,  132 => 27,  124 => 22,  119 => 20,  116 => 19,  111 => 18,  109 => 17,  102 => 12,  92 => 11,  79 => 7,  74 => 6,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -133,6 +217,7 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
 
 {% block header %}
     <link href=\"{{ asset('css/root.css') }}\" rel=\"stylesheet\"/>
+{#    <link href=\"{{ asset('css/item.css') }}\" rel=\"stylesheet\"/>#}
     <link href=\"{{ asset('css/cart.css') }}\" rel=\"stylesheet\"/>
     {{ parent() }}
 
@@ -141,9 +226,62 @@ class __TwigTemplate_c2a96f1c1b24fba9b3a3e2293cfc5fa2c1e6a44937f4512b90840ebe69e
 {% block body %}
     <body>
     <div class=\"container\">
-        <p>my cart</p>
+        <div class=\"items_wrapper\">
+            <div class=\"content_items\">
+
+                    {% if items  %}
+                        {% for item in items %}
+                            <div class=\"item\">
+                                <a class = \"item_content\" href=\"{{ path('show-one', {'id':item.id}) }}\">
+                                    <div class=\"item_image\">
+                                        <img class = \"item_image_content\"src=\"{{ item.img }}\" alt=\"\">
+                                    </div>
+
+                                    <div class=\"item_information\">
+                                    <div class=\"item_name\">
+                                        <p class = \"item_name_text\">{{ item.name }}</p>
+                                    </div>
+                                        <form  class = \"remove_button\" method=\"post\" >
+                                            <input type = \"hidden\" name = \"item_id\" value = \"{{ item.id }}\">
+                                            <button onclick = \"removeItem()\" type = \"submit\" name = \"action\" value=\"remove_from_cart\">Remove</button>
+                                        </form>
+                                    </div>
+
+                                    <div class=\"item_price\">
+                                        <p class = \"item_price_text\">{{ item.price }}\$</p>
+                                    </div>
+
+
+
+
+                                </a>
+
+                            </div>
+                        {% endfor %}
+
+                        <span class=\"total\">
+                                        <p>Total: {{ total }}\$</p>
+                                    </span>
+                    {% else %}
+                        <p>No items in cart</p>
+                    {% endif %}
+
+            </div>
+        </div>
+
+
     </div>
+    <script>
+        function removeItem()
+        {
+            alert('Removed from list');
+        }
+    </script>
     </body>
-{% endblock %}", "Items/cart.html.twig", "/var/www/symfony_docker/templates/Items/cart.html.twig");
+{% endblock %}
+
+
+
+", "Items/cart.html.twig", "/var/www/symfony_docker/templates/Items/cart.html.twig");
     }
 }

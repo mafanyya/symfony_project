@@ -146,7 +146,16 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 </div>
                 <div class=\"buy_now\">
                     <div class=\"buy_button\">
-                    <a class = \"buy_button_text\" href=\"#\">Buy now</a>
+                    <a class = \"buy_button_text\" href=\"/cart\">
+                        <form method=\"post\" >
+                            <input type = \"hidden\" name = \"item_id\" value = \"";
+        // line 48
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 48, $this->source); })()), "id", [], "any", false, false, false, 48), "html", null, true);
+        echo "\">
+                            <button onclick = \"addItem()\" type = \"submit\" name = \"action\" value=\"add_to_cart\">Add to cart</button>
+                        </form>
+
+                    </a>
                     </div>
                 </div>
             </div>
@@ -157,8 +166,8 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
             </div>
             <div class=\"details_description\">
                 <p class = \"details_description_text\">";
-        // line 56
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 56, $this->source); })()), "description", [], "any", false, false, false, 56), "html", null, true);
+        // line 62
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 62, $this->source); })()), "description", [], "any", false, false, false, 62), "html", null, true);
         echo "</p>
             </div>
         </div>
@@ -190,25 +199,20 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             <input type=\"radio\" id = \"5\" name = \"rating\" value = \"5\">
                             <label for=\"1\">5</label>
 
-";
-        // line 92
-        echo "
-";
-        // line 94
-        echo "                        </div>
+                        </div>
                         <div class=\"form_button\">
-                        <button type=\"submit\">Post Review</button>
+                        <button type=\"submit\" name = \"action\" value = \"add_comment\">Post Review</button>
                         </div>
 
                             ";
-        // line 99
+        // line 98
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 99, $this->source); })()), "flashes", [0 => "notice"], "method", false, false, false, 99));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 98, $this->source); })()), "flashes", [0 => "notice"], "method", false, false, false, 98));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 100
+            // line 99
             echo "                                <div class=\"flash-notice\">
                                     ";
-            // line 101
+            // line 100
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
                                 </div>
@@ -217,7 +221,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 104
+        // line 103
         echo "                        </div>
                     </form>
                 </div>
@@ -230,29 +234,29 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                     <p>Reviews</p>
                 </div>
                 ";
-        // line 115
+        // line 114
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 115, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new RuntimeError('Variable "comments" does not exist.', 114, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 116
+            // line 115
             echo "                    <div class=\"comment\">
                         <div class=\"comment_email\">
                             ";
-            // line 118
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 118), "html", null, true);
+            // line 117
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 117), "html", null, true);
             echo "
                         </div>
                         <div class=\"comment_content\">
                             ";
-            // line 121
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 121), "html", null, true);
+            // line 120
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 120), "html", null, true);
             echo "
                         </div>
                         <div class=\"rating_content\">
                             <p>
                                 rating: ";
-            // line 125
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 125), "html", null, true);
+            // line 124
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 124), "html", null, true);
             echo "
                             </p>
 
@@ -263,11 +267,16 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 131
+        // line 130
         echo "            </div>
         </div>
     </div>
     </body>
+    <script>
+        function addItem(){
+            alert('Add to cart')
+        }
+    </script>
 
 ";
         
@@ -290,7 +299,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  267 => 131,  255 => 125,  248 => 121,  242 => 118,  238 => 116,  234 => 115,  221 => 104,  212 => 101,  209 => 100,  205 => 99,  198 => 94,  195 => 92,  161 => 56,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  107 => 14,  97 => 13,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  271 => 130,  259 => 124,  252 => 120,  246 => 117,  242 => 115,  238 => 114,  225 => 103,  216 => 100,  213 => 99,  209 => 98,  170 => 62,  153 => 48,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  107 => 14,  97 => 13,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -340,7 +349,13 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 </div>
                 <div class=\"buy_now\">
                     <div class=\"buy_button\">
-                    <a class = \"buy_button_text\" href=\"#\">Buy now</a>
+                    <a class = \"buy_button_text\" href=\"/cart\">
+                        <form method=\"post\" >
+                            <input type = \"hidden\" name = \"item_id\" value = \"{{ item.id }}\">
+                            <button onclick = \"addItem()\" type = \"submit\" name = \"action\" value=\"add_to_cart\">Add to cart</button>
+                        </form>
+
+                    </a>
                     </div>
                 </div>
             </div>
@@ -381,16 +396,9 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                             <input type=\"radio\" id = \"5\" name = \"rating\" value = \"5\">
                             <label for=\"1\">5</label>
 
-{#                            <button type = button name = \"rating\" id = \"rating1\" value = \"1\" >1</button>#}
-{#                            <button type = button name = \"rating\" id = \"rating3\" value = \"2\" >2</button>#}
-{#                            <button type = button name = \"rating\" id = \"rating4\" value = \"3\" >3</button>#}
-{#                            <button type = button name = \"rating\" id = \"rating5\" value = \"4\" >4</button>#}
-{#                            <button type = button name = \"rating\" id = \"rating6\" value = \"5\" >5</button>#}
-
-{#                            <input  class = \"rating_input\" id = \"rating\" type=\"int\" name=\"rating\">#}
                         </div>
                         <div class=\"form_button\">
-                        <button type=\"submit\">Post Review</button>
+                        <button type=\"submit\" name = \"action\" value = \"add_comment\">Post Review</button>
                         </div>
 
                             {% for message in app.flashes('notice') %}
@@ -429,6 +437,11 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
         </div>
     </div>
     </body>
+    <script>
+        function addItem(){
+            alert('Add to cart')
+        }
+    </script>
 
 {% endblock %}
 

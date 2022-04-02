@@ -14,7 +14,10 @@
   <div class="container">
     <div class="content_header">
         <div class="content_name">
+
             <p class = "content_name_text"> {{ category_name }} </p>
+
+
         </div>
     </div>
 
@@ -23,20 +26,35 @@
           <div class="list_name">
           <p class = "list_name_text">{{ name }}</p>
           </div>
+          {% if name == 'By category' %}
           {% for category in categories %}
               <div class="category_name_list">
                   <div class="list_mark">
                   <img class = "list_mark" src="https://img.icons8.com/material-rounded/24/000000/sort-right.png"/>
                   </div>
-              <li class = "category_name"> <a class = "category_name" href="#">{{ category.name }}</a></li>
+              <li class = "category_name"> <a class = "category_name" href="{{ path(category.name) }}">{{ category.name }}</a></li>
+
               </div>
           {% endfor %}
+          {% else %}
+              {% for age in ages %}
+                  <div class="category_name_list">
+                      <div class="list_mark">
+                          <img class = "list_mark" src="https://img.icons8.com/material-rounded/24/000000/sort-right.png"/>
+                      </div>
+                      <li class = "category_name"> <a class = "category_name" href="{{ path(age.name) }}">{{ age.name }}</a></li>
+
+                  </div>
+              {% endfor %}
+
+
+          {% endif %}
       </div>
 
         <div class="content_items">
+            {% if items %}
 
             {% for item in items %}
-
                 <div class="item">
                     <a class = "item_content" href="{{ path('show-one', {'id':item.id}) }}">
                         <div class="item_image">
@@ -45,14 +63,20 @@
                         <div class="item_name">
                             <p class = "item_name_text">{{ item.name }}</p>
                         </div>
+                        <div class="item_price">
+                            <p class = "item_price_text">{{ item.price }}</p>
+                        </div>
                     </a>
                 </div>
-
             {% endfor %}
+                {% else %}
+                <p>No items</p>
+            {% endif %}
 
         </div>
       </div>
     </div>
+  
   </div>
   </body>
 {% endblock %}

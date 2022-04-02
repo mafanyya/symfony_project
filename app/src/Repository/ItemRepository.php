@@ -45,6 +45,15 @@ class ItemRepository extends ServiceEntityRepository
     }
 
 
+    public function findAllItems()
+    {
+        return $this->createQueryBuilder('items')
+            ->select('items')
+            ->getQuery()
+            ->getArrayResult()
+            ;
+    }
+
   public function findItemsByCategory($categoryName)
   {
     return $this->createQueryBuilder('items')
@@ -68,6 +77,21 @@ public function findItemsByAge($ageName)
         ->getResult()
         ;
 }
+
+    public function findLikedItems($userId)
+    {
+        return $this->createQueryBuilder('items')
+            ->select('items', 'users')
+            ->leftJoin('items.users', 'users')
+            ->andWhere('users = :userId')
+            ->setParameter('userId', $userId)
+            ->getQuery()
+            ->getArrayResult()
+            ;
+    }
+
+
+
 
     // /**
     //  * @return Item[] Returns an array of Item objects

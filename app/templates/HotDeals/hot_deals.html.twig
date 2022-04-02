@@ -1,5 +1,52 @@
 {% extends 'index.html.twig' %}
 
+
+{% block header %}
+  <link href="{{ asset('css/root.css') }}" rel="stylesheet"/>
+  <link href="{{ asset('css/hot_deals.css') }}" rel="stylesheet"/>
+  {{ parent() }}
+
+
+{% endblock %}
+
 {% block body %}
-  <h1> hot deals</h1>
+  <body>
+  <div class="container">
+    <div class="items_wrapper">
+      <div class="content_items">
+
+        {% if items  %}
+          {% for item in items %}
+            <div class="item">
+              <a class = "item_content" href="{{ path('show-one', {'id':item.id}) }}">
+                <div class="item_image">
+                  <img class = "item_image_content"src="{{ item.img }}" alt="">
+                </div>
+
+                <div class="item_information">
+                  <div class="item_name">
+                    <p class = "item_name_text">{{ item.name }}</p>
+                  </div>
+                </div>
+                <div class="old_item_price">
+                  <p class = "old_item_price_text">{{ item.price }}$</p>
+                </div>
+                <div class="item_price">
+                  <p class = "item_price_text">{{ item.newPrice }}$</p>
+                </div>
+              </a>
+
+            </div>
+          {% endfor %}
+
+
+        {% else %}
+          <p>No items in cart</p>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  </body>
 {% endblock %}

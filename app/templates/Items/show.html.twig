@@ -43,7 +43,13 @@
                 </div>
                 <div class="buy_now">
                     <div class="buy_button">
-                    <a class = "buy_button_text" href="#">Buy now</a>
+                    <a class = "buy_button_text" href="/cart">
+                        <form method="post" >
+                            <input type = "hidden" name = "item_id" value = "{{ item.id }}">
+                            <button onclick = "addItem()" type = "submit" name = "action" value="add_to_cart">Add to cart</button>
+                        </form>
+
+                    </a>
                     </div>
                 </div>
             </div>
@@ -84,16 +90,9 @@
                             <input type="radio" id = "5" name = "rating" value = "5">
                             <label for="1">5</label>
 
-{#                            <button type = button name = "rating" id = "rating1" value = "1" >1</button>#}
-{#                            <button type = button name = "rating" id = "rating3" value = "2" >2</button>#}
-{#                            <button type = button name = "rating" id = "rating4" value = "3" >3</button>#}
-{#                            <button type = button name = "rating" id = "rating5" value = "4" >4</button>#}
-{#                            <button type = button name = "rating" id = "rating6" value = "5" >5</button>#}
-
-{#                            <input  class = "rating_input" id = "rating" type="int" name="rating">#}
                         </div>
                         <div class="form_button">
-                        <button type="submit">Post Review</button>
+                        <button type="submit" name = "action" value = "add_comment">Post Review</button>
                         </div>
 
                             {% for message in app.flashes('notice') %}
@@ -132,6 +131,11 @@
         </div>
     </div>
     </body>
+    <script>
+        function addItem(){
+            alert('Add to cart')
+        }
+    </script>
 
 {% endblock %}
 

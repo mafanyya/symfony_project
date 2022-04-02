@@ -31,12 +31,13 @@ class ByAgeController extends AbstractController
       'name' => 'By age',
       'category_name' => 'By age',
       'items' => $this->itemRepository->findAll(),
+      'ages' => $this->ageRepository->findAll(),
       'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
   /**
-   * @Route ("/by-age/0--2-years", name="by-age1")
+   * @Route ("/by-age/0--2-years", name="0-2 years")
    * @return Response
    */
   public function age_02(): Response
@@ -46,12 +47,13 @@ class ByAgeController extends AbstractController
         'name' => 'By age',
       'category_name' => '0-24 months',
         'items' => $this->itemRepository->findItemsByAge('0-2 years'),
+        'ages' => $this->ageRepository->findAll(),
         'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
   /**
-   * @Route ("/by-age/3--4-years", name="by-age2")
+   * @Route ("/by-age/3--4-years", name="3-4 years")
    * @return Response
    */
   public function age_34(): Response
@@ -61,12 +63,13 @@ class ByAgeController extends AbstractController
         'name' => 'By age',
         'category_name' => '3-4 years',
         'items' => $this->itemRepository->findItemsByAge('3-4 years'),
+        'ages' => $this->ageRepository->findAll(),
         'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
   /**
-   * @Route ("/by-age/5--7-years", name="by-age3")
+   * @Route ("/by-age/5--7-years", name="5-7 years")
    * @return Response
    */
   public function age_57(): Response
@@ -76,12 +79,13 @@ class ByAgeController extends AbstractController
         'name' => 'By age',
         'category_name' => '5-7 years',
         'items' => $this->itemRepository->findItemsByAge('5-7 years'),
+        'ages' => $this->ageRepository->findAll(),
         'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
   /**
-   * @Route ("/by-age/8--10-years", name="by-age4")
+   * @Route ("/by-age/8--10-years", name="8-10 years")
    * @return Response
    */
   public function age_810(): Response
@@ -91,12 +95,13 @@ class ByAgeController extends AbstractController
         'name' => 'By age',
         'category_name'=>'8-10 years',
         'items' => $this->itemRepository->findItemsByAge('8-10 years'),
+        'ages' => $this->ageRepository->findAll(),
         'categories' => $this->ageRepository->findAll(),
     ]);
   }
 
   /**
-   * @Route ("/by-age/11-years-and-up", name="by-age5")
+   * @Route ("/by-age/11-years-and-up", name="11+ years")
    * @return Response
    */
   public function age_11(): Response
@@ -106,6 +111,7 @@ class ByAgeController extends AbstractController
         'name' => 'By age',
         'category_name'=>'11+ years',
         'items' => $this->itemRepository->findItemsByAge('11+ years'),
+        'ages' => $this->ageRepository->findAll(),
         'categories' => $this->ageRepository->findAll(),
     ]);
   }

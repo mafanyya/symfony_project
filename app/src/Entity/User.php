@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -28,6 +30,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
+
+    #[ORM\ManyToMany(targetEntity: Item::class, inversedBy: 'users')]
+    private $likedItems;
+
+    public function __construct()
+    {
+        $this->likedItems = new ArrayCollection();
+    }
+
+
+
 
     public function getId(): ?int
     {
@@ -107,6 +120,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+
+
+    public function removeLikedItem(Item $likedItem): self
+    {
+        $this->likedItems->removeElement($likedItem);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Item>
+     */
+    public function getLikedItems(): Collection
+    {
+        return $this->likedItems;
+    }
+
+    public function addLikedItem(Item $likedItem): self
+    {
+        if (!$this->likedItems->contains($likedItem)) {
+            $this->likedItems[] = $likedItem;
+        }
 
         return $this;
     }
