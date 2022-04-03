@@ -338,6 +338,100 @@ class ItemFixtures extends Fixture
     $manager->persist($item25);
     //steam
 
-    $manager->flush();
+      $item26 = new Item();
+      $item26->setName('Closeout! Beyblade Burst Surge Speedstorm Motor Strike Battle Set');
+      $item26->setPrice(52.99);
+      $item26->addCategory($remote);
+      $item26->setAge($age4);
+      $item26->setDescription("Supercharge the battle strategy with Beyblade Burst Speedstorm tech. Launch into a high-speed head to head in the official Beyblade Burst Speedstorm motor strike Beystadium by Hasbro, the first motorized Beystadium in the Beyblade Burst line.");
+      $item26->setImg('https://slimages.macysassets.com/is/image/MCY/products/4/optimized/19793464_fpx.tif');
+      $manager->persist($item26);
+
+
+      $item27 = new Item();
+      $item27->setName('Exquisite Gaming Cable Guy Controller and Phone Holder Classic Sega Sonic');
+      $item27->setPrice(28.99);
+      $item27->addCategory($action);
+      $item27->setAge($age4);
+      $item27->setDescription("Cable guy 100% official licensed collectable classic sega sonic the hedgehog functional figure standing 8 tall and coming with a 2m cable for charging your device, its the perfect squad mate for any bedroom, office or lounge.");
+      $item27->setImg('https://slimages.macysassets.com/is/image/MCY/products/1/optimized/11428121_fpx.tif');
+      $manager->persist($item27);
+
+      $item28 = new Item();
+      $item28->setName('Mag-Genius Magnet Tiles');
+      $item28->setPrice(74.99);
+      $item28->addCategory($build);
+      $item28->setAge($age3);
+      $item28->setDescription("Featuring 141 pieces and 3 buildable car bases, watch your little one have a blast building and playing with all sorts of magnetic structures all day long. ");
+      $item28->setImg('https://slimages.macysassets.com/is/image/MCY/products/0/optimized/17615590_fpx.tif');
+      $manager->persist($item28);
+
+      $item29 = new Item();
+      $item29->setName('Mattel Uno Triple Play');
+      $item29->setPrice(21.99);
+      $item29->addCategory($puzzles);
+      $item29->setAge($age5);
+      $item29->setDescription("The Uno triple play game is 3 times fun, with this unit that holds 3 discard piles, features exciting lights, sounds for suspense, surprise. Game play is like classic Uno, but players may only discard to any pile that are lit up on their turn. ");
+      $item29->setImg('https://slimages.macysassets.com/is/image/MCY/products/7/optimized/19837877_fpx.tif');
+      $manager->persist($item29);
+
+      $item30 = new Item();
+      $item30->setName('Kinetic Sand Sandisfactory Set');
+      $item30->setPrice(15.99);
+      $item30->addCategory($arts);
+      $item30->setAge($age2);
+      $item30->setDescription("Features over 10 molds and clear tools that let you see your mesmerizing effects as you create them. Includes black Kinetic Sand and 3 additional colours.");
+      $item30->setImg('https://slimages.macysassets.com/is/image/MCY/products/5/optimized/20156035_fpx.tif');
+      $manager->persist($item30);
+
+      $item31 = new Item();
+      $item31->setName('Boxed Figure: Kings Toys Joseph Stalin');
+      $item31->setPrice(94.99);
+      $item31->addCategory($action);
+      $item31->setAge($age5);
+      $item31->setDescription("King's Toys might be a new name to 1/6 fans, but they have been in the game behind the scenes for quite a while. They acted as a OEM for some of the biggest 1/6 scale companies and have now released their first figure on their own Joseph Uncle Joe Stalin.");
+      $item31->setImg('https://cdn3.volusion.com/7aztx.j6veq/v/vspfiles/photos/KT0001-3.jpg?v-cache=1321084893');
+      $manager->persist($item31);
+
+      $item32 = new Item();
+      $item32->setName('Discovery Kids Toy Tent Inflatable Dome');
+      $item32->setPrice(24.99);
+      $item32->addCategory($pretend);
+      $item32->setAge($age3);
+      $item32->setDescription("The Discovery play tent will fully inflate in under 30 seconds leaving more time for them to fully engage their imaginations. With no poles and no assembly required, clean up time is a breeze.");
+      $item32->setImg('https://slimages.macysassets.com/is/image/MCY/products/6/optimized/20384926_fpx.tif');
+      $manager->persist($item32);
+
+      $item33 = new Item();
+      $item33->setName('Glowing 3-d Solar System');
+      $item33->setPrice(24.99);
+      $item33->addCategory($learning);
+      $item33->setAge($age5);
+      $item33->setDescription("This kit is astronomical! Gleaming with glow-in-the-dark glimmer, it's a fun way to experience the wonders of science. Now you can hang the planets on your ceiling and recreate the captivating cosmos right in your room.");
+      $item33->setImg('https://slimages.macysassets.com/is/image/MCY/products/2/optimized/11124992_fpx.tif');
+      $manager->persist($item33);
+
+      $item34 = new Item();
+      $item34->setName('Metal Earth 3D Metal Model Kit - Harry Potter Gringotts Dragon');
+      $item34->setPrice(14.95);
+      $item34->addCategory($steam);
+      $item34->setAge($age5);
+      $item34->setDescription("Gringotts Dragon is a unique beautiful creature also known as the Ukrainian Ironbelly species.");
+      $item34->setImg('https://slimages.macysassets.com/is/image/MCY/products/9/optimized/11410849_fpx.tif');
+      $manager->persist($item34);
+
+      $item35 = new Item();
+      $item35->setName('Franklin Sports Go - Pro Basketball Hoop Set');
+      $item35->setPrice(17.99);
+      $item35->addCategory($outdoor);
+      $item35->setAge($age4);
+      $item35->setDescription("The set offers loads of fun for kids as they shoot at the over-the-door hoop with the 4 basketball included in the set Fitting over most doors, the game is the perfect addition to any bedroom, playroom, or even work office.");
+      $item35->setImg('https://slimages.macysassets.com/is/image/MCY/products/7/optimized/11238057_fpx.tif');
+      $manager->persist($item35);
+
+
+
+
+      $manager->flush();
   }
 }

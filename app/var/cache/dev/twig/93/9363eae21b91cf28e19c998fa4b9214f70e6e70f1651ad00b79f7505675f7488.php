@@ -173,7 +173,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
               </div>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
             <a class = \"nav_link\" href=\"/register\">Sign Up</a>
-            
+
                 <a class = \"nav_link\" href=\"/login\">Log In</a>
 
             <a class = \"nav_link\" href=\"/cart\">My cart</a>
@@ -314,7 +314,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
               </div>
           <a class = \"nav_link\" href=\"/hot-deals\">Hot deals</a>
             <a class = \"nav_link\" href=\"/register\">Sign Up</a>
-            
+
                 <a class = \"nav_link\" href=\"/login\">Log In</a>
 
             <a class = \"nav_link\" href=\"/cart\">My cart</a>
