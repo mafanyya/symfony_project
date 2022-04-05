@@ -73,6 +73,12 @@ class __TwigTemplate_db4a468e411ee2b5ea73a48debea085544ab1ff54fee62e87842deefdd4
         return new Source("{% extends 'index.html.twig' %}
 
 
+{#97DBAE - green#}
+{#C3E5AE - light green#}
+{#F1E1A6 - yellow#}
+{#F4BBBB - pink#}
+
+
 ", "base.html.twig", "/var/www/symfony_docker/templates/base.html.twig");
     }
 }

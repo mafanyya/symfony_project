@@ -41,17 +41,13 @@
                 <div class="price">
                     <p class = "price_text">{{ item.price }}$</p>
                 </div>
-                <div class="buy_now">
-                    <div class="buy_button">
-                    <a class = "buy_button_text" href="/cart">
+                    <a class = "add_cart_link" href="/cart">
                         <form method="post" >
                             <input type = "hidden" name = "item_id" value = "{{ item.id }}">
-                            <button onclick = "addItem()" type = "submit" name = "action" value="add_to_cart">Add to cart</button>
+                            <button class = "add_cart_button" onclick = "addItem()" type = "submit" name = "action" value="add_to_cart">Add to cart</button>
                         </form>
 
                     </a>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="row">
@@ -111,6 +107,7 @@
                 <div class="comments_name">
                     <p>Reviews</p>
                 </div>
+                {% if comments %}
                 {% for comment in comments %}
                     <div class="comment">
                         <div class="comment_email">
@@ -126,7 +123,11 @@
 
                         </div>
                     </div>
+
                 {% endfor %}
+                {% else %}
+                <p>No reviews</p
+                        {% endif %}>
             </div>
         </div>
     </div>
