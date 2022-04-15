@@ -22,7 +22,6 @@ return [
     '8-10 years' => [[], ['_controller' => 'App\\Controller\\ByAgeController::age_810'], [], [['text', '/by-age/8--10-years']], [], [], []],
     '11+ years' => [[], ['_controller' => 'App\\Controller\\ByAgeController::age_11'], [], [['text', '/by-age/11-years-and-up']], [], [], []],
     'show-one' => [['id'], ['_controller' => 'App\\Controller\\ByCategoryController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/show']], [], [], []],
-    'showw-one' => [['id'], ['_controller' => 'App\\Controller\\ByCategoryController::showw'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/showw']], [], [], []],
     'by-category' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::byCategory'], [], [['text', '/by-category']], [], [], []],
     'Action figures' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::actionFigures'], [], [['text', '/by-category/action-figures']], [], [], []],
     'Baby and preschool toys' => [[], ['_controller' => 'App\\Controller\\ByCategoryController::babyAndPreschoolToys'], [], [['text', '/by-category/baby-and-preschool-toys']], [], [], []],

@@ -214,7 +214,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
                             <p class = \"item_price_text\">";
                 // line 67
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 67), "html", null, true);
-                echo "</p>
+                echo "\$</p>
                         </div>
                     </a>
                 </div>
@@ -330,7 +330,7 @@ class __TwigTemplate_54e5183d895563b14b4d57d4fbad72fb75cd049813343ab8f66f89f8410
                             <p class = \"item_name_text\">{{ item.name }}</p>
                         </div>
                         <div class=\"item_price\">
-                            <p class = \"item_price_text\">{{ item.price }}</p>
+                            <p class = \"item_price_text\">{{ item.price }}\$</p>
                         </div>
                     </a>
                 </div>

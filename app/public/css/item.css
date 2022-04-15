@@ -49,7 +49,7 @@
     margin-bottom:15px;
     margin-top:0;
     border-radius: 10px;
-    background: #4E30A6;
+    background: var(--yellow);
     padding-left: 25px;
     margin-left: 10px;
 

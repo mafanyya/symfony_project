@@ -110,6 +110,14 @@
                 {% if comments %}
                 {% for comment in comments %}
                     <div class="comment">
+                        <div class="control_panel">
+                            <form method="post">
+                                <input type = "hidden" name = "comment_id" value = "{{ comment.id }}">
+                                <button class = "remove_button" type = submit name = "action" value = "remove_comment">Remove</button>
+                            </form>
+                            <button class = "edit_button" type = button > Edit</button>
+
+                        </div>
                         <div class="comment_email">
                             {{ comment.email }}
                         </div>

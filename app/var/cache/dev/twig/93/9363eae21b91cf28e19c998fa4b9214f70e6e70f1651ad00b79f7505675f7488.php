@@ -213,7 +213,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
 
 
-        <a class = \"main_slogan\" href=\"#\">  &#xF586 Make your child's dream come true</a>
+        <a class = \"main_slogan\" href=\"#\"> Make your child's dream come true</a>
         </div>
       </div>
     </div>
@@ -331,7 +331,7 @@ class __TwigTemplate_dc42c28b5b0934b304ec9959604201f0d4cb2951d991751cc018b045080
 
 
 
-        <a class = \"main_slogan\" href=\"#\">  &#xF586 Make your child's dream come true</a>
+        <a class = \"main_slogan\" href=\"#\"> Make your child's dream come true</a>
         </div>
       </div>
     </div>

@@ -34,9 +34,9 @@ class ByCategoryController extends AbstractController
     #[Route('/show/{id}', name: 'show-one')]
     public function show($id, Request $request, ManagerRegistry $doctrine): Response
     {
+
         if ($request->getMethod() == 'POST') {
             $name = $request->request->get('action');
-
 
             if ($name == 'add_comment'){
             // get post values from form
@@ -81,6 +81,14 @@ class ByCategoryController extends AbstractController
                     return $this->redirectToRoute('registration');
                 }
 
+            }elseif ($name == 'remove_comment'){
+
+                $commentId = $request->request->get('comment_id');
+
+                $comment = $this->commentRepository->find($commentId);
+                $entityManager = $doctrine->getManager();
+                $entityManager->remove($comment);
+                $entityManager->flush();
             }
 
         }
@@ -94,15 +102,6 @@ class ByCategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/showw/{id}', name: 'showw-one')]
-    public function showw(Item $item): Response
-    {
-        $item = $this->itemRepository->find($item);
-        return $this->render('Items/show.html.twig', [
-            'item' => $item,
-            'categories' => $this->categoryRepository->findAll(),
-        ]);
-    }
     /**
      * @Route ("/by-category", name="by-category")
      * @return Response

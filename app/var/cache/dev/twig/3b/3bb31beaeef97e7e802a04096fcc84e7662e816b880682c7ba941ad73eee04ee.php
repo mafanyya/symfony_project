@@ -239,23 +239,34 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
             foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
                 // line 112
                 echo "                    <div class=\"comment\">
+                        <div class=\"control_panel\">
+                            <form method=\"post\">
+                                <input type = \"hidden\" name = \"comment_id\" value = \"";
+                // line 115
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 115), "html", null, true);
+                echo "\">
+                                <button class = \"remove_button\" type = submit name = \"action\" value = \"remove_comment\">Remove</button>
+                            </form>
+                            <button class = \"edit_button\" type = button > Edit</button>
+
+                        </div>
                         <div class=\"comment_email\">
                             ";
-                // line 114
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 114), "html", null, true);
+                // line 122
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "email", [], "any", false, false, false, 122), "html", null, true);
                 echo "
                         </div>
                         <div class=\"comment_content\">
                             ";
-                // line 117
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 117), "html", null, true);
+                // line 125
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "comment", [], "any", false, false, false, 125), "html", null, true);
                 echo "
                         </div>
                         <div class=\"rating_content\">
                             <p>
                                 rating: ";
-                // line 121
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 121), "html", null, true);
+                // line 129
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "rating", [], "any", false, false, false, 129), "html", null, true);
                 echo "
                             </p>
 
@@ -267,14 +278,14 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 128
+            // line 136
             echo "                ";
         } else {
-            // line 129
+            // line 137
             echo "                <p>No reviews</p
                         ";
         }
-        // line 130
+        // line 138
         echo ">
             </div>
         </div>
@@ -307,7 +318,7 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
 
     public function getDebugInfo()
     {
-        return array (  278 => 130,  274 => 129,  271 => 128,  258 => 121,  251 => 117,  245 => 114,  241 => 112,  236 => 111,  234 => 110,  221 => 99,  212 => 96,  209 => 95,  205 => 94,  166 => 58,  151 => 46,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  107 => 14,  97 => 13,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  289 => 138,  285 => 137,  282 => 136,  269 => 129,  262 => 125,  256 => 122,  246 => 115,  241 => 112,  236 => 111,  234 => 110,  221 => 99,  212 => 96,  209 => 95,  205 => 94,  166 => 58,  151 => 46,  144 => 42,  134 => 34,  122 => 24,  114 => 19,  107 => 14,  97 => 13,  83 => 8,  78 => 6,  74 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -424,6 +435,14 @@ class __TwigTemplate_e82d09cb7a4b5cd67c23b9c9d7cc8871aabe4beda6ff5b78a109e55ff09
                 {% if comments %}
                 {% for comment in comments %}
                     <div class=\"comment\">
+                        <div class=\"control_panel\">
+                            <form method=\"post\">
+                                <input type = \"hidden\" name = \"comment_id\" value = \"{{ comment.id }}\">
+                                <button class = \"remove_button\" type = submit name = \"action\" value = \"remove_comment\">Remove</button>
+                            </form>
+                            <button class = \"edit_button\" type = button > Edit</button>
+
+                        </div>
                         <div class=\"comment_email\">
                             {{ comment.email }}
                         </div>

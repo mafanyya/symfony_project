@@ -4622,12 +4622,6 @@
         <argument key="doctrine" type="service_closure" id="doctrine"/>
       </argument>
     </service>
-    <service id=".service_locator.83t1iHB" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="item" type="service_closure" id=".errored..service_locator.83t1iHB.App\Entity\Item"/>
-      </argument>
-    </service>
     <service id=".service_locator.UDgw6Ol" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4641,11 +4635,10 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator.nrgKDTn" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.mVf1JOb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ByCategoryController::show" type="service_closure" id=".service_locator.T7xmfzk"/>
-        <argument key="App\Controller\ByCategoryController::showw" type="service_closure" id=".service_locator.83t1iHB"/>
         <argument key="App\Controller\ContactController::cart" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\LoginController::index" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.4u5os03"/>
@@ -4656,7 +4649,6 @@
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
         <argument key="App\Controller\ByCategoryController:show" type="service_closure" id=".service_locator.T7xmfzk"/>
-        <argument key="App\Controller\ByCategoryController:showw" type="service_closure" id=".service_locator.83t1iHB"/>
         <argument key="App\Controller\ContactController:cart" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\LoginController:index" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.4u5os03"/>
@@ -4976,12 +4968,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.nrgKDTn"/>
+      <argument type="service" id=".service_locator.mVf1JOb"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.nrgKDTn"/>
+      <argument type="service" id=".service_locator.mVf1JOb"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -4991,7 +4983,6 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
-    <service id=".errored..service_locator.83t1iHB.App\Entity\Item" class="App\Entity\Item"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -5715,13 +5706,13 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.nrgKDTn"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.mVf1JOb"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.Dby0_1s" alias=".service_locator.4u5os03"/>
-    <service id=".service_locator.ry.ypew" alias=".service_locator.nrgKDTn"/>
+    <service id=".service_locator.pHVvT4o" alias=".service_locator.mVf1JOb"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.OQLlujA" alias=".service_locator.Kp6MvpF"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -5746,7 +5737,6 @@
     <service id=".service_locator._5g_Wvc" alias=".service_locator.KfwZsne"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
     <service id=".service_locator.T8.TLJR" alias=".service_locator.T7xmfzk"/>
-    <service id=".service_locator.qkMG8CA" alias=".service_locator.83t1iHB"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
     <service id=".service_locator.LzwvCJx" alias=".service_locator.4u5os03"/>
     <service id=".service_locator.ADknlmN" alias=".service_locator.l1ae.Qz"/>

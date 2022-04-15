@@ -57,6 +57,16 @@ class CommentRepository extends ServiceEntityRepository
 
     }
 
+    public function removeCommentById($commentId)
+    {
+        return $this->createQueryBuilder('comments')
+            -> delete('comments', 'id')
+            -> andWhere('comment.id = :comment_id')
+            -> setParameter('comment_id', $commentId)
+            -> getQuery()
+            -> getResult();
+    }
+
 
     // /**
     //  * @return Comment[] Returns an array of Comment objects
